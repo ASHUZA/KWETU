@@ -1,0 +1,139 @@
+
+  .liste_item_titre {
+    height: 30px;
+    background: #ffffff;
+    background: #2b532d;
+    width: 95%;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    margin: 8px;
+    padding-left: 15px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .liste_item_titre .liste_label_titre {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+  
+    color: #ffffff;
+    margin-top: 18px;
+  
+    width: 200px;
+    padding-right: 10px;
+   // background-color: rgb(133, 113, 113);
+  }
+  
+  
+  
+  .liste_item {
+    height: 30px;
+    background: #ffffff;
+    width: 95%;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    margin: 8px;
+    padding-left: 15px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  
+  }
+  .liste_item:hover {
+ 
+    background: #5bfc63;
+  //  color: white !important ;
+  
+  
+  }
+  
+  .liste_item .liste_label {
+  
+    margin-top: 18px;
+  
+    width: 200px;
+    overflow: hidden;
+    padding-right: 10px;
+    text-transform: capitalize;
+   // background-color: rgb(133, 113, 113);
+  }
+  
+  
+  .liste_item .prenom {
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #225B21;
+  }
+  
+  .liste_item .nom {
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #225B21;
+  }
+  
+  .liste_item .postnom {
+   
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  
+  color: #000000;
+  }
+  
+  .liste_item .sante {
+    
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  
+  color: #000000;
+  
+  
+  }
+  
+  .liste_item .sexe {
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #000000;
+  
+  
+  }
+  
+  .liste_item .age {
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #000000;
+  
+  
+  }
