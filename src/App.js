@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import PageSearch from "./pages/PageSearch";
 import RegisterChildForm from "./pages/RegisterChildForm";
 import Child from "./pages/Child";
+import PageNewChild from "./pages/PageNewChild";
 
 
 
@@ -21,12 +22,12 @@ const App = ()=>{
     <Route path="/PageHome" component={PageHome} />
     <Route path="/PageSearch" component={PageSearch} />
     <Route path="/Child" component={Child} />
-    <Route path="/RegisterChildForm" component={RegisterChildForm} />
-    
-    
-      
+    <Route path="/PageNewChild" component={PageNewChild} />
+   
+
         </BrowserRouter>
-    
+//     <Route path="/RegisterChildForm" component={RegisterChildForm} />
+   
   )
 }
 export default App
