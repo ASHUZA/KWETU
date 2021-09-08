@@ -32,7 +32,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <Link to="/RegisterChildForm">
+          <Link to="/PageNewChild">
           <div className="header_item">
             <img src={enfant_new_icon} alt="recherche" />
           </div>

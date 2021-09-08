@@ -1,28 +1,249 @@
-.pagenewchild{
-    width: 100%;
-   // height: 500px;
-    background-color: rgb(202, 41, 41);
+.pagenewchild {
+  width: 100%;
+  padding-top: 30px;
+  margin-left: 40px;
+  // height: 500px;
+  // background-color: rgb(202, 41, 41);
 }
 
-.pagenewchild .titre{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pagenewchild .titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin-top: 20px;
+  // margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-.pagenewchild .titre h2{
- 
+.pagenewchild .titre h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 42px;
 
+  color: #225b21;
+}
+box_child_main {
+}
+.box_child {
+  //height: 100px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.box_child h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 42px;
+
+  color: #000000;
+}
+
+.box_identity {
+  background: #ffffff;
+  border: 3px dashed #225b21;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.box_health {
+  //   background: #c53131;
+  border: 2px dashed #225b21;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.identity_input {
+  width: 80%;
+  //  background-color: rgb(119, 18, 214);
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+
+  justify-content: start;
+}
+.health_input {
+  width: 100%;
+  //  background-color: rgb(119, 18, 214);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+
+  justify-content: start;
+}
+
+.identity_img {
+  width: 15%;
+  height: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  padding: 5px;
+  padding-bottom: 7px;
+  background-color: rgb(226, 235, 223);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.select_box {
+  width: 250px;
+  height: 80px;
+  padding: 0.5%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  //  background-color: #fff;
+}
+
+.select_box .select {
+  border: 2px solid #a0b0a3;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize;
+}
+
+.select_box label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: #000000;
+}
+.btn_save_child {
+  height: 200px;
+  width: 100%;
+  //   background-color: rgb(119, 206, 49);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_next {
+  height: 40px;
+  width: 150px;
+
+  background: #415c38;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_next:hover {
+  border: 1px solid #415c38;
+  box-sizing: border-box;
+  border-radius: 250px;
+  background-color: #fff;
+}
+
+.btn-validate {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}
+.btn-validate:hover {
+  color: #415c38;
+}
+
+.box_vaccin {
+  height: 200px;
+  width: 250px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+
+.box_vaccin .titre{
+    height: 30px;
+    //width: 50px;
+    background-color: rgb(216, 203, 14);
+}
+
+.box_vaccin .titre h3{
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
-font-size: 26px;
-line-height: 42px;
+font-size: 20px;
+line-height: 28px;
 
 color: #000000;
 
 
 }
 
+.box_vaccin .vaccin_item{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(160, 60, 60);
+}
+
+
+.select_vaccin {
+    border: 2px solid #a0b0a3;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: capitalize;
+  }
+
+  
+.select_box {
+    width: 250px;
+    height: 80px;
+    padding: 0.5%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    //  background-color: #fff;
+  }
+  
+  .select_box .select {
+    border: 2px solid #a0b0a3;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: capitalize;
+  }
+  
+  .select_box label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+  
+    color: #000000;
+  }

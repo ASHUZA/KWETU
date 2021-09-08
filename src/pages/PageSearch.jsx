@@ -11,13 +11,11 @@ const PageSearch = () => {
       <Header></Header>
       <div className="pagesearch">
         <div className="container container_search">
-        
-          <div className="container">
           <div className="liste_titre">
             <h3>LISTE DES ENFANTS EN CHARGE</h3>
           </div>
-
-            <div className="container">
+          <div className="container liste_search">
+            <div className="liste_items">
               <div className="liste_box_search">
                 <div className="liste_item_titre">
                   <p className="liste_label_titre prenom">Prenom</p>
@@ -42,56 +40,62 @@ const PageSearch = () => {
                 <ListeItem></ListeItem>
               </div>
             </div>
-          </div>
 
-          <div className="search_box">
-            <div className="search_item">
-              <label></label>
-              <input className="w3-input" type="text" value="Recherche" />
-            </div>
-            <div className="search_item">
-              <label></label>
-              <select className="select fw">
-                <option value="1">Par age</option>
+            <div className="search_box">
+              <div className="search_result">
+                <p>
+                  Resultats :<span>150 enfants en charge</span>
+                </p>
+              </div>
 
-                <option value="2">2 Mois</option>
-                <option value="3">3 Mois</option>
-                <option value="4">4 Mois</option>
-                <option value="5">5 Mois</option>
-                <option value="6">6 Mois</option>
-                <option value="7">7 Mois</option>
-                <option value="8">8 Mois</option>
-                <option value="9">9 Mois</option>
-                <option value="10">10 Mois</option>
-                <option value="11">11 Mois</option>
-                <option value="12">12 Mois</option>
-                <option value="13">13 Mois</option>
-                <option value="14">14 Mois</option>
-                <option value="15">15 Mois</option>
-              </select>
-            </div>
+              <div className="title">
+                <h4>Recherche</h4>
+              </div>
+              <div className="search_time">
+                <div className="search_item">
+                  <label>Recherhe par nom</label>
+                  <input className="w3-input" type="text" />
+                </div>
+              </div>
+              <div className="search_time">
+                <div className="search_item">
+                  <label>Par Annee</label>
+                  <select className="select">
+                    <option value="1">Par annee</option>
 
-            <div className="search_item">
-              <label></label>
-              <select className="select fw">
-                <option value="1">Par sexe</option>
+                    <option value="1">MASCULIN</option>
+                    <option value="2">FEMININ</option>
+                  </select>
+                </div>
 
-                <option value="1">MASCULIN</option>
-                <option value="2">FEMININ</option>
-              </select>
-            </div>
+                <div className="search_item">
+                  <label>Par Mois</label>
+                  <select className="select fw">
+                    <option value="1">Par mois</option>
+                    <option value="1">KADUTU</option>
+                  </select>
+                </div>
+              </div>
 
-            <div className="search_item">
-              <label></label>
-              <select className="select fw">
-                <option value="1">Par provenance</option>
-                <option value="1">KADUTU</option>
-                <option value="2">ESSENCE</option>
-                <option value="3">BAGIRA</option>
-                <option value="4">NYAWERA</option>
-                <option value="5">KADUTU</option>
-                <option value="6">ESSENCE</option>
-              </select>
+              <div className="search_time">
+                <div className="search_item">
+                  <label>Par Annee</label>
+                  <select className="select fw">
+                    <option value="1">Par annee</option>
+
+                    <option value="1">MASCULIN</option>
+                    <option value="2">FEMININ</option>
+                  </select>
+                </div>
+
+                <div className="search_item">
+                  <label>Par Mois</label>
+                  <select className="select fw">
+                    <option value="1">Par mois</option>
+                    <option value="1">KADUTU</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>

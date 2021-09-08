@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: 200px;
+  margin-left: 120px;
 }
 .pagehome .titre1 {
   margin-top: 50px;
@@ -96,42 +96,70 @@ margin-top: 10px;
 }
 
 .box_info {
-  height: 100px;
+  //height: 150px;
   background: #ffffff;
   width: 100%;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+ // box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 //  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 15px;
-}
-.box_info .titre {
-  height: 10%;
-  // background-color: rgb(32, 218, 162);
-  margin-top: -5px;
+  margin-bottom: 20px;
+  padding: 20px;
+ 
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.box_info .titre h3 {
+
+.box_info .box  {
+
+  height: 150px;
+  width: 230px;
+  //background-color: rgb(223, 74, 74);
+
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  //  margin-top: 50px;
+   // margin-bottom: 50px;
+    padding: 5px;
+}
+.box_info .box .titre{
+//background-color: #fff;
+height: 10%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 15px;
+}
+
+
+.box_info .box .number{
+// background-color: rgb(62, 146, 214);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80%;  
+}
+
+.box_info .box h3 {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #005618;
+
+//  margin-left: 10px;
+}
+
+.box_info .box h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
   line-height: 26px;
 
   color: #005618;
 
-  margin-left: 10px;
-}
-
-.box_info .box p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-
-  color: #000000;
-
-  margin-top: 20px;
   margin-left: 10px;
 }
 
