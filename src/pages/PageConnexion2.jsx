@@ -5,6 +5,7 @@ import img_connection from "./../images/svg/connexion.svg";
 import React from "react";
 import { Link } from "react-router-dom";
 import PageHome from "./../pages/PageHome.jsx";
+import SideBar from "../components/SideBar";
 
 const PageConnexion2 = () => {
   return (
@@ -38,7 +39,11 @@ const PageConnexion2 = () => {
                  
                    <input type="password" placeholder="Password" />
                 </div>
-                <button>Sign in</button>
+                <button>
+                <Link className="btn-sign" to="/PageHome">
+                Sign in
+              </Link>
+                </button>
                 {/* <p>
                   <b>Forgot paswword ?</b>
                 </p>
@@ -49,6 +54,10 @@ const PageConnexion2 = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="sidebar">
+          <SideBar></SideBar>
         </div>
       </div>
     </>

@@ -68,6 +68,7 @@
   position: relative;
   width: 100%;
   margin: 1rem 0;
+ // background-color: blue;
 }
 
 .input-group img {
@@ -88,6 +89,8 @@
   border-radius: 0.5rem;
   border: 0.125rem solid var(--white);
   outline: none;
+ // background-color:red ;
+  height:15px;
 }
 
 .input-group input:focus {
@@ -108,6 +111,10 @@
   justify-content: center;
   align-items: center;
  margin-bottom: 10px;
+// color:white;
+}
+.btn-sign{
+  color: white !important; 
 }
 
 .text {

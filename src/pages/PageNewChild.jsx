@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./../scss/PageNewChild.scss";
+// import "./../scss/PageNewChild.scss";
 import profil_icon from "./../images/svg/profil.svg";
 
 import Header from "./Header";

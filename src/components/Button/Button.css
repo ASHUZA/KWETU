@@ -1,4 +1,4 @@
-.button {
+/* .button {
   margin: 2%;
   padding: 0.5%;
   border: 2px solid #577d4b;
@@ -10,7 +10,7 @@
 .button:hover {
   background-color: transparent;
   color: #577d4b;
-}
+} */
 .centered-content {
-  text-align: center;
+  /* text-align: center; */
 }

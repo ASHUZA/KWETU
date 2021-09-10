@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: "Roboto";
   src: url("../../fonts/Roboto-Regular.ttf");
 
@@ -45,21 +45,6 @@ h2 {
 }
 .fw {
   width: 95%;
-  /*border: 0px solid red;*/
-}
-.qfw {
-  width: 70%;
-  /*border: 0px solid orangered;*/
-  
-}
-.hw {
-  width: 45%;
-  /*border: 0px solid orange;*/
-}
-.lw {
-  width: 20%;
-  /*border: 0px solid yellow;*/
-}
-a {
-  text-decoration: none;
+  border: 0px solid red;
+
 }
