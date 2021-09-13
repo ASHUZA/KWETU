@@ -10,6 +10,7 @@ import PageSearch2 from "./PageSearch2";
 import AddParents from "./AddParents";
 import NewChild2 from "./NewChild2";
 import ModalSaveChild from "./ModalSaveChild";
+import SectionStep from "./SectionStep";
 const PageHome2 = () => {
   return (
     <>
@@ -158,7 +159,7 @@ const PageHome2 = () => {
       {/* PARTIE GENERAL */}
 
 {/* <ModalSaveChild/> */}
-
+<SectionStep></SectionStep>
 <PageSearch2/>
 
 <AddParents/>

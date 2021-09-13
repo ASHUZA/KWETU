@@ -15,7 +15,7 @@ const AddParents = () => {
         <div className="user_main">
           <div className="container">
             <div className="row">
-              <div className="col-sm-5">
+              <div className="col-sm-6">
                 <div className="table-wrapper">
                   <table className="fl-table">
                     <thead>
@@ -81,59 +81,23 @@ const AddParents = () => {
                   </table>
                 </div>
               </div>
-              <div className="col-sm-6 parrents-box">
-              <div className="col-sm-3">
-                <form className="parrents-table">
+          
+             
+              <div className="col-sm-6 save-child">
+                <div className="form-title">
+                  <h3>Informations sur l'accompagnant</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <form className="child-form">
                   {/* <h3 className="title">Basic information</h3> */}
-
-                  <div className="form-title">
-                 <h3>MERE</h3>
-                 <i className="fas fa-ellipsis-h"></i>
-                  </div>
-
-               
+                  <div className="form-main">
+                  
                   <div className="form-group">
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Nom"
+                      placeholder="sexe"
                     />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-                 
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Mot de passe"
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <button className="btn signup">Enregister</button>
-                  </div>
-                </form>
-              </div>
-              <div className="col-sm-3">
-                <form className="parrents-table">
-                  {/* <h3 className="title">Basic information</h3> */}
-                
-                  <div className="form-title">
-                 <h3>PERE</h3>
-                 <i className="fas fa-ellipsis-h"></i>
                   </div>
                   <div className="form-group">
                     <input
@@ -160,22 +124,15 @@ const AddParents = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Telephone"
+                      placeholder="Mot de passe"
                     />
                   </div>
-               
                   <div className="form-group">
-                    <button className="btn signup">Enregister</button>
-                  </div>
-                </form>
-              </div>
-              <div className="col-sm-3">
-                <form className="form-horizontal parrents-table">
-                  {/* <h3 className="title">Basic information</h3> */}
-               
-                  <div className="form-title">
-                 <h3>TUTAIRE</h3>
-                 <i className="fas fa-ellipsis-h"></i>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Groupe utilisateur"
+                    />
                   </div>
                   <div className="form-group">
                     <input
@@ -184,38 +141,17 @@ const AddParents = () => {
                       placeholder="Mot de passe"
                     />
                   </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
                   </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <button className="btn signup">Enregister</button>
+                  <div className="form-footer">
+                    <button className="btn signup">Register</button>
                   </div>
                 </form>
               </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>
-        </div>
+       
         
 
       
