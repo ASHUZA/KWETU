@@ -31,10 +31,9 @@ const NewChild2 = () => {
                       placeholder="Nom"
                     />
                   </div>
-  
 
-    <MDBInput label="Example label" outline />
- 
+                  <MDBInput label="Example label" outline />
+
                   <div className="form-group">
                     <input
                       type="password"
@@ -99,79 +98,28 @@ const NewChild2 = () => {
               </div>
 
               <div className="col-sm-6 save-child">
-              <div className="form-title">
+                <div className="form-title">
                   <h3>Informations sur le père</h3>
                   <i className="fas fa-ellipsis-h"></i>
                 </div>
                 <form className="child-form">
-                  {/* <h3 className="title">Basic information</h3> */}
-
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Nom"
-                    />
+                    <MDBInput label="Example label" outline />
                   </div>
                   <div className="form-group">
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Post nom"
-                    />
+                    <MDBInput label="Example label" outline />
                   </div>
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Prenom"
-                    />
+                    <MDBInput label="Example label" outline />
                   </div>
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="sexe"
-                    />
+                    <MDBInput label="Example label" outline />
                   </div>
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="sexe"
-                    />
+                    <MDBInput label="Example label" outline />
                   </div>
                   <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="E-mail"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Groupe utilisateur"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Mot de passe"
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <button className="btn signup">Register</button>
+                    <MDBInput label="Example label" outline />
                   </div>
                 </form>
               </div>
