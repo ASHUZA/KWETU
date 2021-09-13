@@ -7,6 +7,9 @@ import Header from "./Header";
 import ListeItem from "../components/ListeItem";
 import user_img from "../images/user_img.png";
 import PageSearch2 from "./PageSearch2";
+import AddParents from "./AddParents";
+import NewChild2 from "./NewChild2";
+import ModalSaveChild from "./ModalSaveChild";
 const PageHome2 = () => {
   return (
     <>
@@ -154,12 +157,241 @@ const PageHome2 = () => {
 
       {/* PARTIE GENERAL */}
 
-
+{/* <ModalSaveChild/> */}
 
 <PageSearch2/>
+
+<AddParents/>
+<NewChild2/>
       <div className="wrapper">
         <div className="user_main">
          
+
+        <div className="container">
+            <div className="row">
+            <div className="col-sm-6">
+                <form className="child-form">
+                  {/* <h3 className="title">Basic information</h3> */}
+               
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Post nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Prenom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="sexe"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="sexe"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Telephone"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="E-mail"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Groupe utilisateur"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Mot de passe"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <button className="btn signup">Register</button>
+                  </div>
+                </form>
+              </div>
+              <div className="col-sm-3">
+                
+              <form className="form-horizontal user-form">
+                  {/* <h3 className="title">Basic information</h3> */}
+                  <div className="user-img">
+                    <img
+                      src={user_img}
+                      alt="User image"
+                      className="img"
+                      data-toggle="user-menu"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Post nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Prenom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="sexe"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Telephone"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="E-mail"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Groupe utilisateur"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Mot de passe"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <button className="btn signup">Register</button>
+                  </div>
+                </form>
+              </div>
+
+              <div className="col-sm-3">
+                <form className="form-horizontal user-form">
+                  {/* <h3 className="title">Basic information</h3> */}
+                  <div className="user-img">
+                    <img
+                      src={user_img}
+                      alt="User image"
+                      className="img"
+                      data-toggle="user-menu"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Post nom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Prenom"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="sexe"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Telephone"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="E-mail"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Groupe utilisateur"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Mot de passe"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <button className="btn signup">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
 
          
           <div className="container">
