@@ -7,6 +7,14 @@ import PageSearch from "./pages/PageSearch";
 import RegisterChildForm from "./pages/RegisterChildForm";
 import Child from "./pages/Child";
 import PageNewChild from "./pages/PageNewChild";
+import HomeKesho from "./pages/HomeKesho";
+import UserManagement from "./pages/UserManagement";
+import UserCount from "./pages/UserCount";
+import KeshoChildren from "./pages/KeshoChildren";
+import KeshoChild from "./pages/KeshoChild";
+import KeshoParents from "./pages/KeshoParents";
+import KeshoChart from "./pages/KeshoChart";
+import ReactStep from "./pages/ReactStep";
 
 
 
@@ -14,13 +22,20 @@ import PageNewChild from "./pages/PageNewChild";
 const App = ()=>{
   return (
 
-   // <Header/>
    
 
     <BrowserRouter>
 
     
-    <Route exact path="/" component={PageConnexion2} />
+    <Route exact path="/" component={PageConnexion2} /> 
+    <Route exact path="/ReactStep" component={ReactStep} /> 
+    <Route exact path="/KeshoChart" component={KeshoChart} /> 
+    <Route exact path="/KeshoParents" component={KeshoParents} />    
+    <Route exact path="/KeshoChildren" component={KeshoChildren} />    
+    <Route exact path="/KeshoChild" component={KeshoChild} />
+    <Route exact path="/UserCount" component={UserCount} /> 
+    <Route exact path="/UserManagement" component={UserManagement} />
+    <Route exact path="/HomeKesho" component={HomeKesho} />    
     <Route path="/PageHome" component={PageHome2} />
     <Route path="/PageSearch" component={PageSearch} />
     <Route path="/Child" component={Child} />

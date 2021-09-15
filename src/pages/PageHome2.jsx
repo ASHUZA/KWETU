@@ -158,22 +158,24 @@ const PageHome2 = () => {
 
       {/* PARTIE GENERAL */}
 
-{/* <ModalSaveChild/> */}
-<SectionStep></SectionStep>
-<PageSearch2/>
+      {/* <ModalSaveChild/> */}
+      <div className="wrapper">
+      <SectionStep></SectionStep>
+      </div>
+      <PageSearch2 />
 
-<AddParents/>
-<NewChild2/>
+      <AddParents />
+      <AddParents />
+      <AddParents />
+      <NewChild2 />
       <div className="wrapper">
         <div className="user_main">
-         
-
-        <div className="container">
+          <div className="container">
             <div className="row">
-            <div className="col-sm-6">
+              <div className="col-sm-6">
                 <form className="child-form">
                   {/* <h3 className="title">Basic information</h3> */}
-               
+
                   <div className="form-group">
                     <input
                       type="text"
@@ -244,8 +246,7 @@ const PageHome2 = () => {
                 </form>
               </div>
               <div className="col-sm-3">
-                
-              <form className="form-horizontal user-form">
+                <form className="form-horizontal user-form">
                   {/* <h3 className="title">Basic information</h3> */}
                   <div className="user-img">
                     <img
@@ -394,13 +395,12 @@ const PageHome2 = () => {
             </div>
           </div>
 
-         
           <div className="container">
             <div className="row">
-            <div className="col-sm-6">
+              <div className="col-sm-6">
                 <form className="child-form">
                   {/* <h3 className="title">Basic information</h3> */}
-               
+
                   <div className="form-group">
                     <input
                       type="text"
@@ -471,8 +471,7 @@ const PageHome2 = () => {
                 </form>
               </div>
               <div className="col-sm-3">
-                
-              <form className="form-horizontal user-form">
+                <form className="form-horizontal user-form">
                   {/* <h3 className="title">Basic information</h3> */}
                   <div className="user-img">
                     <img

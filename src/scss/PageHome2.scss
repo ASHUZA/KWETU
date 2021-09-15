@@ -812,3 +812,57 @@ margin-right: 10px;
 .form-horizontal-user .user-img img {
   width: 100%;
 }
+
+.form-horizontal-user {
+  margin: 10px 0px 0px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.user-input{
+  display: flex;
+  background-color: rgb(216, 108, 108);
+}
+
+.user-input-profile{
+
+  background-color: rgb(71, 78, 44);
+}
+
+.user-input-main{
+//  background-color: rgb(163, 202, 22);
+  display: flex;
+  justify-content: center;
+}
+.user-input-main .form-control{
+border: 1px solid #a0b0a3;
+  background: rgba(248, 242, 242, 0.308);
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 12px;}
+
+  .form-footer-user .btn {
+    cursor: pointer;
+    width: 20%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    align-self: center;
+  }
+
+

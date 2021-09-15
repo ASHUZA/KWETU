@@ -8,7 +8,7 @@ const genData = () => ({
   datasets: [
     {
       type: 'line',
-      label: 'Dataset 1',
+      label: 'Gueris',
       borderColor: 'rgb(231, 27, 27)',
       borderWidth: 2,
       fill: false,
@@ -16,15 +16,15 @@ const genData = () => ({
     },
     {
       type: 'bar',
-      label: 'Dataset 2',
-      backgroundColor: `rgb(11, 228, 22)`,
+      label: 'Perdue de vue',
+      backgroundColor: `#4fc3a1`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()],
       borderColor: 'white',
       borderWidth: 2,
     },
     {
       type: 'bar',
-      label: 'Dataset 3',
+      label: 'Mort',
       backgroundColor: `#577d4b`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()],
     },
