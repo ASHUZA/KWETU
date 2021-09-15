@@ -1,61 +1,65 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import "./KeshoPagination.scss"
     
 
-export const KeshoPagination =()=>{
+export class KeshoPagination extends PureComponent {
 
-    const [state, setState]=useState(
-        {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
             offset: 0,
             tableData: [],
             orgtableData: [],
             perPage: 15,
-            currentPage: 0
+            currentPage: 0,
+            searchTerm:""
         }
-    )
 
+        this.handlePageClick = this.handlePageClick.bind(this);
 
+    }
 
- const   handlePageClick = (e) => {
+    handlePageClick = (e) => {
         const selectedPage = e.selected;
-        const offset = selectedPage * state.perPage;
+        const offset = selectedPage * this.state.perPage;
 
-        setState({
+        this.setState({
             currentPage: selectedPage,
             offset: offset
         }, () => {
-            loadMoreData()
+            this.loadMoreData()
         });
 
     };
 
- const   loadMoreData=()=> {
-		const data = state.orgtableData;
+    loadMoreData() {
+		const data = this.state.orgtableData;
 		
-		const slice = data.slice(state.offset, state.offset + state.perPage)
-		setState({
-			pageCount: Math.ceil(data.length / state.perPage),
+		const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
+		this.setState({
+			pageCount: Math.ceil(data.length / this.state.perPage),
 			tableData:slice
 		})
 	
     }
 
- useEffect(() => {
-    getData();
- }, [])
-
-  const  getData=()=> {
+   componentDidMount(){
+        this.getData();
+    }
+    getData() {
         axios
             .get('https://jsonplaceholder.typicode.com/comments')
             .then(res => {
                 var tdata = res.data;
                 console.log('data-->'+JSON.stringify(tdata))
-				 var slice = tdata.slice(state.offset, state.offset + state.perPage)
-                setState({
-                    pageCount: Math.ceil(tdata.length / state.perPage),
+				 var slice = tdata.slice(this.state.offset, this.state.offset + this.state.perPage)
+                this.setState({
+                    pageCount: Math.ceil(tdata.length / this.state.perPage),
                     orgtableData : tdata,
                     tableData:slice
                 })
@@ -63,8 +67,8 @@ export const KeshoPagination =()=>{
     }
 
 
-        
-    const [searchTerm, setSearchTerm] = useState(""); 
+    render() {
+
 
     
 
@@ -73,9 +77,16 @@ export const KeshoPagination =()=>{
                <input type="text" 
                placeholder="Search..."
                onChange={(event) => {
-                   setSearchTerm(event.target.value);
+                   
+                this.setState({
+                    searchTerm: event.target.value
+                })
+                
                }}
                />
+
+                 
+
 
 
                  <div className="col-sm-6">
@@ -92,10 +103,10 @@ export const KeshoPagination =()=>{
                     </thead>
                     <tbody>
                     {
-                          state.tableData.filter((tdata)=> {
-                              if (searchTerm == "") {
+                          this.state.tableData.filter((tdata)=> {
+                              if ( this.state.searchTerm == "") {
                                   return tdata
-                              } else if (tdata.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                              } else if (tdata.name.toLowerCase().includes( this.state.searchTerm.toLowerCase())) {
                                   return tdata
                               }
                           }).map((tdata, i) => (
@@ -119,16 +130,16 @@ export const KeshoPagination =()=>{
                     nextLabel={"next"}
                     breakLabel={"..."}
                     breakClassName={"break-me"}
-                    pageCount={state.pageCount}
+                    pageCount={this.state.pageCount}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={3}
-                    onPageChange={handlePageClick}
+                    onPageChange={this.handlePageClick}
                     containerClassName={"pagination"}
                     subContainerClassName={"pages pagination"}
                     activeClassName={"active"}/>
             </div>
         )
-    
+    }
 }
 
 export default KeshoPagination
