@@ -1,61 +1,61 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
+import {useState, useEffect} from 'react';
+import "./KeshoPagination.scss"
     
 
-export class KeshoPagination extends PureComponent {
+export const KeshoPagination =()=>{
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
+    const [state, setState]=useState(
+        {
             offset: 0,
             tableData: [],
             orgtableData: [],
-            perPage: 10,
+            perPage: 15,
             currentPage: 0
         }
+    )
 
-        this.handlePageClick = this.handlePageClick.bind(this);
 
-    }
 
-    handlePageClick = (e) => {
+ const   handlePageClick = (e) => {
         const selectedPage = e.selected;
-        const offset = selectedPage * this.state.perPage;
+        const offset = selectedPage * state.perPage;
 
-        this.setState({
+        setState({
             currentPage: selectedPage,
             offset: offset
         }, () => {
-            this.loadMoreData()
+            loadMoreData()
         });
 
     };
 
-    loadMoreData() {
-		const data = this.state.orgtableData;
+ const   loadMoreData=()=> {
+		const data = state.orgtableData;
 		
-		const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
-		this.setState({
-			pageCount: Math.ceil(data.length / this.state.perPage),
+		const slice = data.slice(state.offset, state.offset + state.perPage)
+		setState({
+			pageCount: Math.ceil(data.length / state.perPage),
 			tableData:slice
 		})
 	
     }
 
-   componentDidMount(){
-        this.getData();
-    }
-    getData() {
+ useEffect(() => {
+    getData();
+ }, [])
+
+  const  getData=()=> {
         axios
             .get('https://jsonplaceholder.typicode.com/comments')
             .then(res => {
                 var tdata = res.data;
                 console.log('data-->'+JSON.stringify(tdata))
-				 var slice = tdata.slice(this.state.offset, this.state.offset + this.state.perPage)
-                this.setState({
-                    pageCount: Math.ceil(tdata.length / this.state.perPage),
+				 var slice = tdata.slice(state.offset, state.offset + state.perPage)
+                setState({
+                    pageCount: Math.ceil(tdata.length / state.perPage),
                     orgtableData : tdata,
                     tableData:slice
                 })
@@ -63,50 +63,72 @@ export class KeshoPagination extends PureComponent {
     }
 
 
-    render() {
+        
+    const [searchTerm, setSearchTerm] = useState(""); 
+
+    
+
         return (
             <div>
-                 <h1>Gk Techy</h1>
+               <input type="text" 
+               placeholder="Search..."
+               onChange={(event) => {
+                   setSearchTerm(event.target.value);
+               }}
+               />
 
-                 <table border="1">
-                     <thead>
-                         <th>Id</th>
+
+                 <div className="col-sm-6">
+                <div className="table-wrapper">
+                  <table  border="1" className="fl-table">
+                    <thead>
+                    <tr>
+                    <th>Id</th>
                          <th>Name</th>
                          <th>Email</th>
-                         <th>Body</th>
-
-                     </thead>
-                     <tbody>
-                        {
-                          this.state.tableData.map((tdata, i) => (
+                         {/* <th>Body</th> */}
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {
+                          state.tableData.filter((tdata)=> {
+                              if (searchTerm == "") {
+                                  return tdata
+                              } else if (tdata.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                  return tdata
+                              }
+                          }).map((tdata, i) => (
                                 <tr>
                                     <td>{tdata.id}</td>
                                     <td>{tdata.name}</td>
                                     <td>{tdata.email}</td>
-                                    <td>{tdata.body}</td>
+                                    {/* <td>{tdata.body}</td> */}
                                 </tr>
                             
                           ))
                         }
 
-                     </tbody>
-                 </table>   
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
                  <ReactPaginate
                     previousLabel={"prev"}
                     nextLabel={"next"}
                     breakLabel={"..."}
                     breakClassName={"break-me"}
-                    pageCount={this.state.pageCount}
+                    pageCount={state.pageCount}
                     marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    onPageChange={this.handlePageClick}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
                     containerClassName={"pagination"}
                     subContainerClassName={"pages pagination"}
                     activeClassName={"active"}/>
             </div>
         )
-    }
+    
 }
 
 export default KeshoPagination
