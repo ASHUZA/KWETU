@@ -1,16 +1,11 @@
 import react from "react";
 import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
-import SectionListe from "../sections/SectionListe";
-import ClickEvents from "../sections/ClickEvents";
-import Header from "./Header";
-import ListeItem from "../components/ListeItem";
+
 import user_img from "../images/user_img.png";
-import PageSearch2 from "./PageSearch2";
-import AddParents from "./AddParents";
-import NewChild2 from "./NewChild2";
-import ModalSaveChild from "./ModalSaveChild";
-import SectionStep from "./SectionStep";
+
+import KeshoSearchTab from "../components/Tables/KeshoSearchTab";
+import KeshoPagination from "../components/Tables/KeshoPagination";
 const KeshoChildren = () => {
   return (
     <>
@@ -158,102 +153,11 @@ const KeshoChildren = () => {
 
       
       <div className="wrapper">
-        <div className="user_main d-flex justify-content-center">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-9">
-                <div className="table-wrapper">
-                  <table className="fl-table">
-                    <thead>
-                      <tr>
-                        <th>Prenom</th>
-                        <th>Nom</th>
-                        <th>Sexe</th>
-                        <th>Poste</th>
-                        <th>Type compte</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                      </tr>
-                      <tr>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                      </tr>
-                      <tr>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                      </tr>
-                      <tr>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                      </tr>
-                      <tr>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                      </tr>
-                      <tr>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                      </tr>
-                      <tr>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                      </tr>
-                      <tr>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                      </tr>
-                      <tr>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                      </tr>
-                      <tr>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              
-            </div>
-          </div>     
-        </div>
-      </div>
+          {/* <KeshoSearchTab></KeshoSearchTab> */}
+          <KeshoPagination/>
+          
+          </div>
+        
  
 
       

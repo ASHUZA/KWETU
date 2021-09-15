@@ -4,6 +4,7 @@ import SocialProfiles from './SocialProfiles';
 import Confirm from './Confirm';
 import Success from './Success';
 import ParentFather from './ParentFather';
+import ParentMather from './ParentMather';
 
 export class Form extends Component {
     state = {
@@ -18,9 +19,12 @@ export class Form extends Component {
         phone_pere: '',
         sexe_pere: '',
 
-        facebook: '',
-        twitter: '',
-        github: ''
+        nom_mere: '',
+        prenom_mere: '',
+        phone_mere: '',
+        sexe_mere: '',
+
+        
     };
 
     nextStep = () => {
@@ -41,8 +45,8 @@ export class Form extends Component {
 
     render() {
         const { step } = this.state;
-        const { nom_tut, prenom_tut, phone_tut, sexe_tut, nom_pere, prenom_pere, phone_pere, sexe_pere, facebook, twitter, github } = this.state;
-        const values = {nom_tut, prenom_tut, phone_tut, sexe_tut, nom_pere, prenom_pere, phone_pere, sexe_pere, facebook, twitter, github };
+        const { nom_tut, prenom_tut, phone_tut, sexe_tut, nom_pere, prenom_pere, phone_pere, sexe_pere, nom_mere, prenom_mere, phone_mere, sexe_mere  } = this.state;
+        const values = {nom_tut, prenom_tut, phone_tut, sexe_tut, nom_pere, prenom_pere, phone_pere, sexe_pere, nom_mere, prenom_mere, phone_mere, sexe_mere };
 
         switch (step) {
             case 1:
@@ -65,12 +69,13 @@ export class Form extends Component {
                     );
             case 3:
                 return (
-                    <SocialProfiles
+                    <ParentMather
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         inputChange={this.inputChange}
                         values={values}
                     />
+
                 );
             case 4:
                 return (
