@@ -152,9 +152,85 @@ const KeshoChildren = () => {
       </div>
 
       
-      <div className="wrapper">
+      <div className="wrapper d-flex">
           {/* <KeshoSearchTab></KeshoSearchTab> */}
+          <div className="col-sm-7">
           <KeshoPagination/>
+          </div>
+          <div className="col-sm-5">
+          <div className="form-user">
+            <div className="form-title">
+              <h3>Profil enfant</h3>
+              <i className="fas fa-ellipsis-h"></i>
+            </div>
+            <form className="form-horizontal form-profil">
+      
+              <div className="form-main d-flex">
+                {/* <div className="user-img">
+                  <img
+                    src={user_img}
+                    alt="User image"
+                    className="img"
+                    data-toggle="user-menu"
+                  />
+                </div> */}
+                <div className="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Nom"
+                  />
+                </div>
+                <div className="form-group">
+                <label for="exampleInputPassword1">Prenom</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Post nom"
+                  />
+                </div>
+                <div className="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                 <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Prenom"
+                  />
+                </div>
+                <div className="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                 <input
+                    type="text"
+                    className="form-control"
+                    placeholder="sexe"
+                  />
+                </div>
+                <div className="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                 <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Telephone"
+                  />
+                </div>
+                <div className="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="E-mail"
+                  />
+                </div>
+               
+              </div>
+              <div className="form-footer-user">
+                <button className="btn signup">Voir plus</button>
+              </div>
+            </form>
+          </div>
+
+          </div>
           
           </div>
         

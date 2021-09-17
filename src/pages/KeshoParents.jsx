@@ -221,71 +221,52 @@ const KeshoParents = () => {
                 </div>
               </div>
           
-             
-              <div className="col-sm-6 save-child">
-                <div className="form-title">
-                  <h3>Informations sur l'accompagnant</h3>
-                  <i className="fas fa-ellipsis-h"></i>
+              <div className="form-user col-sm-5">
+            <div className="form-title">
+              <h3>Profil enfant</h3>
+              <i className="fas fa-ellipsis-h"></i>
+            </div>
+            <form className="form-horizontal form-profil">
+              <div className="form-main d-flex">
+                {/* <div className="user-img">
+                  <img
+                    src={user_img}
+                    alt="User image"
+                    className="img"
+                    data-toggle="user-menu"
+                  />
+                </div> */}
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Nom</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Nom"
+                  />
                 </div>
-                <form className="child-form">
-                  {/* <h3 className="title">Basic information</h3> */}
-                  <div className="form-main">
-                  
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="sexe"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Telephone"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="E-mail"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Groupe utilisateur"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Mot de passe"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Groupe utilisateur"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Mot de passe"
-                    />
-                  </div>
-                  </div>
-                  <div className="form-footer">
-                    <button className="btn signup">Register</button>
-                  </div>
-                </form>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Prenom</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Post nom"
+                  />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Nom</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Prenom"
+                  />
+                </div>
+       
               </div>
+              <div className="form-footer-user">
+                <button className="btn signup">Voir plus</button>
+              </div>
+            </form>
+          </div>
             </div>
 
 

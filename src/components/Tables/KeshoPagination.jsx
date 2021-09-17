@@ -73,8 +73,11 @@ export class KeshoPagination extends PureComponent {
     
 
         return (
-            <div>
+            <div className="d-flex flex-column">
+              
+              
                <input type="text" 
+               className="form-control-search"
                placeholder="Search..."
                onChange={(event) => {
                    

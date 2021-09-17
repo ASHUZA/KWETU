@@ -1,16 +1,10 @@
 import react from "react";
 import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
-import SectionListe from "../sections/SectionListe";
-import ClickEvents from "../sections/ClickEvents";
-import Header from "./Header";
 import ListeItem from "../components/ListeItem";
 import user_img from "../images/user_img.png";
-import PageSearch2 from "./PageSearch2";
-import AddParents from "./AddParents";
-import NewChild2 from "./NewChild2";
-import ModalSaveChild from "./ModalSaveChild";
 import SectionStep from "./SectionStep";
+import Form from "../components/forms/components/Form";
 const KeshoChild = () => {
   return (
     <>
@@ -158,7 +152,10 @@ const KeshoChild = () => {
 
       
       <div className="wrapper">
-      <SectionStep></SectionStep>
+     
+          <Form/>
+        
+
       </div>
 
  

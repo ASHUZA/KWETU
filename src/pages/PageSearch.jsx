@@ -1,6 +1,6 @@
 import react from "react";
 
-import "./../scss/PageSearch.scss";
+// import "./../scss/PageSearch.scss";
 import SectionListe from "../sections/SectionListe";
 import Header from "./Header";
 import ListeItem from "../components/ListeItem";

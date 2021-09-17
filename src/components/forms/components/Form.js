@@ -5,6 +5,7 @@ import Confirm from './Confirm';
 import Success from './Success';
 import ParentFather from './ParentFather';
 import ParentMather from './ParentMather';
+import "./Form.scss"
 
 export class Form extends Component {
     state = {

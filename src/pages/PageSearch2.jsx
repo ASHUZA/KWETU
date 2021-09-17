@@ -6,6 +6,7 @@ import ClickEvents from "../sections/ClickEvents";
 import Header from "./Header";
 import ListeItem from "../components/ListeItem";
 import user_img from "../images/user_img.png";
+import { MDBInput } from "mdbreact";
 const PageSearch2 = () => {
   return (
     <>
@@ -120,13 +121,19 @@ const PageSearch2 = () => {
                         data-toggle="user-menu"
                       />
                     </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Nom"
-                      />
-                    </div>
+                    <div className="form form112">
+    <input type="text" id="email" className="form__input" autocomplete="off" placeholder=" "/>
+    <label for="email" className="form__label">Email</label>
+  </div>
+
+  <div className="App h-screen flex justify-center items-center bg-black">
+      <label className='relative cursor-pointer'>
+        <input type="text" placeholder="Input" className='h-20 w-96 px-6 text-4xl text-black bg-black border-white border-2 rounded-lg border-opacity-50 outline-none focus:border-blue-500 placeholder-gray-300 placeholder-opacity-0 transition duration-200' />
+        <span className='text-4xl text-white text-opacity-80 bg-black absolute left-5 top-5 px-1 transition duration-200 input-text'>Input</span>
+      </label>
+    </div>
+
+                    <MDBInput label="Example label" outline size="sm" />
                     <div className="form-group">
                       <input
                         type="password"
@@ -195,72 +202,72 @@ const PageSearch2 = () => {
                 <form className="form-horizontal-user">
                   <div className="col-sm-12 d-flex justify-content-center">
                     <div className="col-sm-4">
-                    <div className="user-img">
-                      <img
-                        src={user_img}
-                        alt="User image"
-                        className="img"
-                        data-toggle="user-menu"
-                      />
-                    </div>
+                      <div className="user-img">
+                        <img
+                          src={user_img}
+                          alt="User image"
+                          className="img"
+                          data-toggle="user-menu"
+                        />
+                      </div>
                     </div>
                     <div className="col-sm-8 d-flex flex-wrap mt-3 user-input-main">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
-                      />
-                    </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Groupe utilisateur"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Mot de passe"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Groupe utilisateur"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Mot de passe"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Groupe utilisateur"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Mot de passe"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Groupe utilisateur"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Mot de passe"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="form-footer-user">

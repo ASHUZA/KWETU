@@ -362,8 +362,8 @@ h2 {
 /* Table Styles */
 
 .table-wrapper {
-  margin: 10px 20px 20px;
-  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+  margin: 10px 0px 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .fl-table {
@@ -740,10 +740,6 @@ margin-right: 10px;
 
 .form-main 
 {
- 
-//padding: 10px;
-display: flex;
-flex-wrap: wrap;
 }
 
 
@@ -779,23 +775,7 @@ margin-right: 10px;
   display: flex;
   justify-content: center;
 }
-.form-footer-user .btn {
-  cursor: pointer;
-  width: 60%;
-  border: none;
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-size: 1rem;
-  outline: none;
-  border-radius: 0.5rem;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  color: white;
-  align-self: center;
-}
+
 
 .form-horizontal-user{
   display: flex;
@@ -836,23 +816,65 @@ margin-right: 10px;
   display: flex;
   justify-content: center;
 }
-.user-input-main .form-control{
+
+
+
+
+
+// FOR KESHO CHILDREN PART
+
+.form-profil{
+  margin: 10px 0px 0px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-main {
+  justify-content: space-between;
+  flex-wrap:wrap ;
+}
+.form-main .form-group{
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  align-items: flex-start;
+  
+ // margin-left: 5px;
+  
+}
+.form-main label{
+
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+
+}
+.form-main .form-control{
 border: 1px solid #a0b0a3;
   background: rgba(248, 242, 242, 0.308);
   border-radius: 5px;
   height: 25px;
   width: 200px;
-  margin-right: 10px;
-  margin-top: 10px;
-  font-size: 12px;}
+ // margin-right: 10px;
+ // margin-top: 10px;
+  font-size: 12px;
+}
 
-  .form-footer-user .btn {
+.form-profil  .form-footer-user .btn {
     cursor: pointer;
-    width: 20%;
+    width: 150px ;
     border: none;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1rem;
+    font-size: 14px;
     outline: none;
     border-radius: 0.5rem;
     height: 30px;
@@ -864,5 +886,15 @@ border: 1px solid #a0b0a3;
     color: white;
     align-self: center;
   }
+.form-control-search{
+  border: 1px solid #a0b0a3;
+  background: rgba(248, 242, 242, 0.308);
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  margin-left:  15px;
+ // margin-top: 10px;
+  font-size: 12px;
+}
 
-
+ 
