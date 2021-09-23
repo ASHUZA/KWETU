@@ -76,4 +76,86 @@
   .confirm-box{
       margin-top: 15px;
   }
+
+
+  .form-add-child {
   
+    padding-top: 30px ;
+     margin: 10px 0px 0px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  }
+
+  .form-add-child .form-group{
+  //  background-color: #777685;
+ //  margin-right: 2px;
+  }
+  .form-add-child .form-group label{
+    margin-bottom:-20px;
+    
+  }
+  .form-add-child .form-group .form-control{
+    border: 1px solid #a0b0a3;
+    background: rgba(248, 242, 242, 0.308);
+    border-radius: 5px;
+    height: 27px;
+    width: 180px;
+   // margin-right: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+    
+  }
+
+  .form-famille .form-group {
+    margin-right: 25px;
+
+  }
+  
+
+
+  //TOOGLE SWITCH PART
+
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  .toggle-switch .switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.2s ease;
+  }
+  .toggle-switch .switch::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: #aaa;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  .toggle-switch input[type="checkbox"]:checked + .switch::before {
+    transform: translateX(25px);
+    background-color:  #aecfc3;
+  }
+  .toggle-switch input[type="checkbox"]:checked + .switch {
+    background-color:  #4ea685;
+  }
+
+
+  //END TOGGLE SWITCH

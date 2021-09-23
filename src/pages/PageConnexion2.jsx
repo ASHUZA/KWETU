@@ -16,9 +16,9 @@ const PageConnexion2 = () => {
             <div className="text sign-in">
               <h2>Welcome back</h2>
               <p>
-                Kesho Congo  dolor sit amet consectetur, adipisicing elit. Natus
-                culpa, neque ex, non accusantium quibusdam atque architecto quas
-                ullam 
+              Kesho Congo Center for Nutrition and Health EducationCentre Nutritionnel et d'Éducation Sanitaire de Kesho Congo
+
+                
               </p>
             </div>
             <div className="img sign-in">
@@ -40,7 +40,7 @@ const PageConnexion2 = () => {
                    <input type="password" placeholder="Password" />
                 </div>
                 <button>
-                <Link className="btn-sign" to="/PageHome">
+                <Link className="btn-sign" to="/KeshoChild">
                 Sign in
               </Link>
                 </button>

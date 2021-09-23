@@ -3,6 +3,7 @@ import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
 
 import user_img from "../images/user_img.png";
+import FormChild from "../components/FormChild/components/FormChild";
 
 const KeshoParents = () => {
   return (
@@ -127,7 +128,7 @@ const KeshoParents = () => {
                   <i className="fas fa-adjust"></i>
                 </div>
                 <span>Morbi</span>
-              </a>
+              </a>  
             </li>
             <li className="sidebar-nav-item">
               <a href="#" className="sidebar-nav-link">
@@ -151,128 +152,17 @@ const KeshoParents = () => {
 
    
       <div className="wrapper">
-        <div className="user_main">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-6">
-                <div className="table-wrapper">
-                  <table className="fl-table">
-                    <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Post Nom</th>
-                        <th>Prenom</th>
-                        <th>Enfants au centre</th>
-                       
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                      <tr>
-                        <td>Muteba</td>
-                        <td>Buhendwa</td>
-                        <td>Randy</td>
-                        <td>5 enfants</td>
-                       
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-          
-              <div className="form-user col-sm-5">
-            <div className="form-title">
-              <h3>Profil enfant</h3>
-              <i className="fas fa-ellipsis-h"></i>
-            </div>
-            <form className="form-horizontal form-profil">
-              <div className="form-main d-flex">
-                {/* <div className="user-img">
-                  <img
-                    src={user_img}
-                    alt="User image"
-                    className="img"
-                    data-toggle="user-menu"
-                  />
-                </div> */}
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Nom</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Nom"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Prenom</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Post nom"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Nom</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Prenom"
-                  />
-                </div>
-       
-              </div>
-              <div className="form-footer-user">
-                <button className="btn signup">Voir plus</button>
-              </div>
-            </form>
-          </div>
-            </div>
-
-
-            
-            </div>
-          </div>
+      
+      <div className="container">
+ 
+  <div className="row">
+    
+    
+    <div className="col-12">
+      <FormChild/>
+    </div>
+  </div>
+</div>
         </div>
        
         

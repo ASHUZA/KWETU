@@ -29,6 +29,7 @@ const App = ()=>{
     
     <Route exact path="/" component={PageConnexion2} /> 
     <Route exact path="/ReactStep" component={ReactStep} /> 
+    {/* <Route exact path="/ReactStep" component={ReactStep} />  */}
     <Route exact path="/KeshoChart" component={KeshoChart} /> 
     <Route exact path="/KeshoParents" component={KeshoParents} />    
     <Route exact path="/KeshoChildren" component={KeshoChildren} />    

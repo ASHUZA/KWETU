@@ -1,0 +1,79 @@
+
+  
+
+
+  .form-container .form-title {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    
+  }
+  .form-container .form-title h3 {
+  font-size: 16px;
+  color: white;
+  margin-left: 10px;
+  
+  }
+  
+  
+  .form-container .form-title i{
+  cursor: pointer;
+  margin-right: 10px;
+  }
+
+  .form-container-confirm .form-title1{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .succes-container{
+      height: 80vh;
+  }
+
+  .succes-text{
+      color:#4ea685;
+  }
+  
+.footer-succes .btn {
+    cursor: pointer;
+    width: 250px ;
+    border: none;
+    background-color: #4ea685;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0.5rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    align-self: center;
+  }
+  .footer-form .btn{
+    cursor: pointer;
+    width: 100px ;
+    border: none;
+    background-color: #4ea685;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0.5rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+   
+  }
+
+  .confirm-box{
+      margin-top: 15px;
+  }
+  
