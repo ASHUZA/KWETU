@@ -40,7 +40,7 @@ const PageConnexion2 = () => {
                    <input type="password" placeholder="Password" />
                 </div>
                 <button>
-                <Link className="btn-sign" to="/KeshoChild">
+                <Link className="btn-sign" to="/KeshoChart">
                 Sign in
               </Link>
                 </button>

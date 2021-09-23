@@ -156,3 +156,64 @@
 }
 
 //END TOGGLE SWITCH
+.vaccin-box p{
+
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 28px;
+
+color: #000000;
+
+}
+.child-box{
+  
+  padding-top: 30px;
+  margin: 10px 0px 0px;
+  padding: 10px;
+  background-color: #fff;
+  //box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+
+ // height: 160px;
+  width: 130px;
+}
+.vaccin-box{
+
+  padding-top: 30px;
+  margin: 10px 0px 0px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+
+  height: 110px;
+  width: 170px;
+}
+
+.list-group .form-add-child .child-img{
+   height: 150px;
+   width: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.list-group .form-add-child img{
+  //height: 150px;
+  width: 100%;
+
+}
+.list-group .form-add-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.famille-form .form-group {
+  margin-right: 8px;
+}
+

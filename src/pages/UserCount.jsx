@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import user_img from "../images/user_img.png";
 import SectionStep from "./SectionStep";
 import PageSearch2 from "./PageSearch2";
+import Navbar from "../components/Navbar";
 const UserCount = () => {
   return (
     <>
@@ -54,100 +55,7 @@ const UserCount = () => {
           </div>
         </div>
       </div>
-      <div className="side_bar">
-        <div className="sidebar">
-          <ul className="sidebar-nav">
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-tachometer-alt"></i>
-                </div>
-                <span>Dashboard</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link active">
-                <div>
-                  <i className="bx bx-search-alt-2"></i>
-                </div>
-                <span>Recherche</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bx-user-plus"></i>
-                </div>
-                <span>Nouve enfant</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bxs-user"></i>
-                </div>
-                <span>Utilisateur</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bx-line-chart"></i>
-                </div>
-                <span>Rapport</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-bug"></i>
-                </div>
-                <span>Paramettre</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-chart-line"></i>
-                </div>
-                <span>Apropos</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-book-open"></i>
-                </div>
-                <span>Pellentesque</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-adjust"></i>
-                </div>
-                <span>Morbi</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fab fa-algolia"></i>
-                </div>
-                <span>Praesent</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-audio-description"></i>
-                </div>
-                <span>Pellentesque</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Navbar/>
       <div className="wrapper">
       <div className="container">
             <div className="row">

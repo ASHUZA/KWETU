@@ -7,6 +7,7 @@ import Sanitaire from './Sanitaire';
 import Vaccination from './Vaccination';
 import Accompagnant from './Accompagnant';
 import Famille from './Famille';
+import img_child from "./../../../images/enfant2.jpg";
 
 export class FormChild extends Component {
     state = {

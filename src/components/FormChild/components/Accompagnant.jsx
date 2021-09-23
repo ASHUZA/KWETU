@@ -33,15 +33,13 @@ export class Accompagnant extends Component {
                               <div className="form-group">
                                 <label htmlFor="name">Nom</label>
                             
-
-                                <select id="monselect" className="form-control"   onChange={inputChange("nom_tut")}
-                                  >
-                                  <option value="valeur1">Valeur 1</option>
-                                  <option value="valeur2" selected>
-                                    Valeur 2
-                                  </option>
-                                  <option value="valeur3">Valeur 3</option>
-                                </select>
+                                <input
+                                type="email"
+                                className="form-control"
+                                name="prenom"
+                                onChange={inputChange("prenom_tut")}
+                                value={values.prenom_tut}
+                              />
 
 
                               </div>
@@ -177,13 +175,14 @@ export class Accompagnant extends Component {
                               </div>
                               <div className="form-group">
                                 <label htmlFor="password">Scolarité</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  name="sexe"
-                                  onChange={inputChange("sexe_tut")}
-                                  value={values.sexe_tut}
-                                />
+                                <select id="monselect" className="form-control"   onChange={inputChange("nom_tut")}
+                                  >
+                                  <option value="valeur1">Valeur 1</option>
+                                  <option value="valeur2" selected>
+                                    Valeur 2
+                                  </option>
+                                  <option value="valeur3">Valeur 3</option>
+                                </select>
                               </div>
 
                               <div className="form-group">
@@ -205,7 +204,7 @@ export class Accompagnant extends Component {
                       </div>
                     </div>
                   </div>
-
+                  <div class="row">
                   <div class="col-sm-7">
                     <div className="form-container">
                       <div className="form-title">
@@ -340,6 +339,7 @@ export class Accompagnant extends Component {
                       </div>
                     </div>
                   </div>
+                </div> 
                 </div>
               </div>
             </div>

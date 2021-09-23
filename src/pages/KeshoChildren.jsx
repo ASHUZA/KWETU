@@ -6,6 +6,7 @@ import user_img from "../images/user_img.png";
 
 import KeshoSearchTab from "../components/Tables/KeshoSearchTab";
 import KeshoPagination from "../components/Tables/KeshoPagination";
+import Navbar from "../components/Navbar";
 const KeshoChildren = () => {
   return (
     <>
@@ -56,187 +57,96 @@ const KeshoChildren = () => {
           </div>
         </div>
       </div>
-      <div className="side_bar">
-        <div className="sidebar">
-          <ul className="sidebar-nav">
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-tachometer-alt"></i>
+      <Navbar/>
+
+      <div className="wrapper d-flex">
+        {/* <KeshoSearchTab></KeshoSearchTab> */}
+        <div className="col-sm-9">
+          <KeshoPagination />
+        </div>
+        <div className="col-sm-3">
+          
+        <div className="col-sm-12 form-user">
+                <div className="form-title">
+                  <h3>Compte utilisateur</h3>
+                  <i className="fas fa-ellipsis-h"></i>
                 </div>
-                <span>Dashboard</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link active">
-                <div>
-                  <i className="bx bx-search-alt-2"></i>
-                </div>
-                <span>Recherche</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bx-user-plus"></i>
-                </div>
-                <span>Nouve enfant</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bxs-user"></i>
-                </div>
-                <span>Utilisateur</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="bx bx-line-chart"></i>
-                </div>
-                <span>Rapport</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-bug"></i>
-                </div>
-                <span>Paramettre</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-chart-line"></i>
-                </div>
-                <span>Apropos</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-book-open"></i>
-                </div>
-                <span>Pellentesque</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-adjust"></i>
-                </div>
-                <span>Morbi</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fab fa-algolia"></i>
-                </div>
-                <span>Praesent</span>
-              </a>
-            </li>
-            <li className="sidebar-nav-item">
-              <a href="#" className="sidebar-nav-link">
-                <div>
-                  <i className="fas fa-audio-description"></i>
-                </div>
-                <span>Pellentesque</span>
-              </a>
-            </li>
-          </ul>
+                <form className="form-horizontal user-form">
+                  {/* <h3 className="title">Basic information</h3> */}
+
+                  <div className="form-main form-main-user">
+                    <div className="user-img">
+                      <img
+                        src={user_img}
+                        alt="User image"
+                        className="img"
+                        data-toggle="user-menu"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Nom"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="password"
+                        className="form-control"
+                        placeholder="Post nom"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Prenom"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="sexe"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Telephone"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="E-mail"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Groupe utilisateur"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Mot de passe"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-footer-user">
+                    <button className="btn signup">Register</button>
+                  </div>
+                </form>
+              </div>
         </div>
       </div>
-
-      
-      <div className="wrapper d-flex">
-          {/* <KeshoSearchTab></KeshoSearchTab> */}
-          <div className="col-sm-7">
-          <KeshoPagination/>
-          </div>
-          <div className="col-sm-5">
-          <div className="form-user">
-            <div className="form-title">
-              <h3>Profil enfant</h3>
-              <i className="fas fa-ellipsis-h"></i>
-            </div>
-            <form className="form-horizontal form-profil">
-      
-              <div className="form-main d-flex">
-                {/* <div className="user-img">
-                  <img
-                    src={user_img}
-                    alt="User image"
-                    className="img"
-                    data-toggle="user-menu"
-                  />
-                </div> */}
-                <div className="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Nom"
-                  />
-                </div>
-                <div className="form-group">
-                <label for="exampleInputPassword1">Prenom</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Post nom"
-                  />
-                </div>
-                <div className="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                 <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Prenom"
-                  />
-                </div>
-                <div className="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                 <input
-                    type="text"
-                    className="form-control"
-                    placeholder="sexe"
-                  />
-                </div>
-                <div className="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                 <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Telephone"
-                  />
-                </div>
-                <div className="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="E-mail"
-                  />
-                </div>
-               
-              </div>
-              <div className="form-footer-user">
-                <button className="btn signup">Voir plus</button>
-              </div>
-            </form>
-          </div>
-
-          </div>
-          
-          </div>
-        
- 
-
-      
     </>
   );
 };
