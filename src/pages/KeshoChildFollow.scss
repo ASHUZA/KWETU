@@ -1,0 +1,48 @@
+.form-main-visit .visit {
+  height: 30px;
+  //background-color: rgb(250, 254, 255);
+  width: 100%;
+  margin-top: 10px;
+
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-main-visit {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+  //width: 100%;
+  text-transform:uppercase
+  
+}
+
+.form-main-visit .visit:hover {
+    width: 100%;
+color: rgb(0, 196, 130);
+text-transform:uppercase;
+cursor: pointer;
+}
+.visit-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+   // background-color: rgb(63, 29, 29);
+}
+.visit-img-box .childs-img {
+height: 200px;
+margin: 10px;
+margin-top: 20px;
+overflow: hidden;
+    
+    }
+    
+.visit-img-box .childs-img img{
+
+}
+
+// .form-add-visit{ background-color: rgb(42, 52, 145);}
