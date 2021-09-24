@@ -75,6 +75,9 @@ const KeshoChildren = () => {
                   {/* <h3 className="title">Basic information</h3> */}
 
                   <div className="form-main form-main-user">
+                   
+                    <ul class="list-group">
+                    <li class="list-group-item">
                     <div className="user-img">
                       <img
                         src={user_img}
@@ -83,65 +86,26 @@ const KeshoChildren = () => {
                         data-toggle="user-menu"
                       />
                     </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Nom"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="password"
-                        className="form-control"
-                        placeholder="Post nom"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Prenom"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="sexe"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Telephone"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="E-mail"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
-                      />
-                    </div>
-                  </div>
+                     </li>
+                        <li class="list-group-item">Nome: </li>
+                        <li class="list-group-item">Prenom: </li>
+                        <li class="list-group-item">Postnom: </li>
+                        <li class="list-group-item">Sexe: </li>
+                        <li class="list-group-item">
+                          Date de naissance: 
+                        </li>
+                        <li class="list-group-item">
+                          Groupe de consulation: 
+                        </li>
+                        <li class="list-group-item">Adresse: </li>
+                        <li class="list-group-item">Provenance: </li>
+                        <li class="list-group-item">
+                          Mode d'arrivé: 
+                        </li>
+                      </ul>
                   <div className="form-footer-user">
                     <button className="btn signup">Register</button>
+                  </div>
                   </div>
                 </form>
               </div>

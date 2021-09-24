@@ -1,11 +1,174 @@
 import react from "react";
+import { useEffect, useState } from "react";
 import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
 import user_img from "../images/user_img.png";
+import user_img_default from "../images/profil.png";
 import SectionStep from "./SectionStep";
 import PageSearch2 from "./PageSearch2";
 import Navbar from "../components/Navbar";
+import "./UserManagement.scss";
+
 const UserManagement = () => {
+  const Utilisateurs = [
+    {
+      id: 1,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: `https://scontent.ffih1-2.fna.fbcdn.net/v/t1.18169-9/16196015_10154888128487744_6901111466535510271_n.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGaJhJHTcvbGlprrDE2o1PrYP_INh5Bmohg_8g2HkGaiBGk69YcO2uK4RNfEj4G2lIUZtVcuVzQK0gQYAe9Zx67&_nc_ohc=BPRsoFXFKJgAX8eWB-H&_nc_ht=scontent.ffih1-2.fna&oh=e05e1efa2fca57fea27376a9630b4424&oe=6171C533`,
+    },
+    {
+      id: 2,
+      nom: "Kalimbiro",
+      postnom: "Amani",
+      prenom: "Ruffin",
+      poste: "Stagiaire",
+      sexe: "Homme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 3,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 4,
+      nom: "Kalimbiro",
+      postnom: "Amani",
+      prenom: "Ruffin",
+      poste: "Stagiaire",
+      sexe: "Homme",
+      phone: "0974574833",
+      Groupeuser: "Administrateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 5,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 6,
+      nom: "Kalimbiro",
+      postnom: "Amani",
+      prenom: "Ruffin",
+      poste: "Stagiaire",
+      sexe: "Homme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 7,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 8,
+      nom: "Kalimbiro",
+      postnom: "Amani",
+      prenom: "Ruffin",
+      poste: "Stagiaire",
+      sexe: "Homme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 9,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "Administrateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 10,
+      nom: "Kalimbiro",
+      postnom: "Amani",
+      prenom: "Ruffin",
+      poste: "Stagiaire",
+      sexe: "Homme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+    {
+      id: 11,
+      nom: "Riziki",
+      postnom: "Chuma",
+      prenom: "Bénédicte",
+      poste: "Nustrisioniste",
+      sexe: "Femme",
+      phone: "0974574833",
+      Groupeuser: "utilisateur",
+      login: "Rushingwa",
+      password: "ChekaNabatoto",
+      image: "",
+    },
+  ];
+
+  let defaultImage = "user_img_default";
+  const [foundUser, setFoundUser] = useState({});
+  const [idUser, setIdUser] = useState(1);
+
+  useEffect(() => {
+    const foundUser = Utilisateurs.find((user) => user.id === idUser);
+    setFoundUser(foundUser);
+  }, [idUser]);
+
+  function Showuser(id) {
+    setIdUser(id);
+  }
+
   return (
     <>
       <div className="homme_main">
@@ -55,7 +218,7 @@ const UserManagement = () => {
           </div>
         </div>
       </div>
-      <Navbar/>
+      <Navbar />
 
       <div className="wrapper">
         <div className="user_main d-flex justify-content-center">
@@ -66,84 +229,29 @@ const UserManagement = () => {
                   <table className="fl-table">
                     <thead>
                       <tr>
-                        <th>Prenom</th>
+                        <th>prenom</th>
                         <th>Nom</th>
                         <th>Sexe</th>
                         <th>Poste</th>
+                        <th>Phone</th>
                         <th>Type compte</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                        <td>Content 1</td>
-                      </tr>
-                      <tr>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                        <td>Content 2</td>
-                      </tr>
-                      <tr>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                        <td>Content 3</td>
-                      </tr>
-                      <tr>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                      </tr>
-                      <tr>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                      </tr>
-                      <tr>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                      </tr>
-                      <tr>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                      </tr>
-                      <tr>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                      </tr>
-                      <tr>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                      </tr>
-                      <tr>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                      </tr>
+                      {Utilisateurs.map(function (element) {
+                        return (
+                          <>
+                            <tr onClick={() => Showuser(element.id)}>
+                              <td>{element.nom}</td>
+                              <td>{element.prenom}</td>
+                              <td>{element.sexe}</td>
+                              <td>{element.poste}</td>
+                              <td>{element.phone}</td>
+                              <td>{element.Groupeuser}</td>
+                            </tr>
+                          </>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -154,82 +262,113 @@ const UserManagement = () => {
                   <h3>Compte utilisateur</h3>
                   <i className="fas fa-ellipsis-h"></i>
                 </div>
+
                 <form className="form-horizontal user-form">
                   {/* <h3 className="title">Basic information</h3> */}
 
                   <div className="form-main form-main-user">
                     <div className="user-img">
                       <img
-                        src={user_img}
+                        src={foundUser.image ? foundUser.image : user_img}
                         alt="User image"
                         className="img"
                         data-toggle="user-menu"
                       />
                     </div>
                     <div className="form-group">
+                      <label htmlFor="name">Nom</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Nom"
+                        name="sexe"
+                        value={foundUser.nom}
                       />
                     </div>
                     <div className="form-group">
-                      <input
-                        type="password"
-                        className="form-control"
-                        placeholder="Post nom"
-                      />
-                    </div>
-                    <div className="form-group">
+                      <label htmlFor="name">prenom</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Prenom"
+                        name="sexe"
+                        value={foundUser.prenom}
                       />
                     </div>
                     <div className="form-group">
+                      <label htmlFor="name">postnom</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="sexe"
+                        name="sexe"
+                        value={foundUser.postnom}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="name">Sexe</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="sexe"
+                        value={foundUser.sexe}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="name">Telephone</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="sexe"
+                        value={foundUser.phone}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="name">Poste</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="sexe"
+                        value={foundUser.poste}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="name">Groupe utilisateur</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="sexe"
+                        value={foundUser.Groupeuser}
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label htmlFor="name">Login</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="sexe"
+                        value={foundUser.login}
                       />
                     </div>
                     <div className="form-group">
+                      <label htmlFor="name">Mot de passe</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Telephone"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="E-mail"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Groupe utilisateur"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Mot de passe"
+                        name="sexe"
+                        value={foundUser.password}
                       />
                     </div>
                   </div>
                   <div className="form-footer-user">
-                    <button className="btn signup">Register</button>
+                    <button className="btn signup">Enregistrer</button>
                   </div>
                 </form>
               </div>
             </div>
-          </div>     
+          </div>
         </div>
       </div>
     </>

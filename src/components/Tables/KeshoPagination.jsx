@@ -92,7 +92,7 @@ export class KeshoPagination extends PureComponent {
 
 
 
-                 <div className="col-sm-6">
+                 <div className="col-sm-12">
                 <div className="table-wrapper">
                   <table  border="1" className="fl-table">
                     <thead>
