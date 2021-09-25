@@ -1,5 +1,7 @@
 import react from "react";
 import { useEffect, useState } from "react";
+
+import ReactPaginate from "react-paginate";
 import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
 import user_img from "../images/user_img.png";
@@ -156,6 +158,25 @@ const UserManagement = () => {
     },
   ];
 
+
+
+  
+  const [users, setUsers] = useState(Utilisateurs.slice(0, 100));
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 15;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const pageCount = Math.ceil(users.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+
+
+
+
   let defaultImage = "user_img_default";
   const [foundUser, setFoundUser] = useState({});
   const [idUser, setIdUser] = useState(1);
@@ -224,11 +245,14 @@ const UserManagement = () => {
         <div className="user_main d-flex justify-content-center">
           <div className="container">
             <div className="row">
-              <div className="col-sm-9">
-                <div className="table-wrapper">
-                  <table className="fl-table">
-                    <thead>
-                      <tr>
+            <div className="col-sm-9">
+          <div className="pagesearch-main">
+            <div className="table-wrapper">
+              <table className="fl-table">
+                <thead>
+                
+             
+                    <tr>
                         <th>prenom</th>
                         <th>Nom</th>
                         <th>Sexe</th>
@@ -236,26 +260,42 @@ const UserManagement = () => {
                         <th>Phone</th>
                         <th>Type compte</th>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {Utilisateurs.map(function (element) {
-                        return (
-                          <>
-                            <tr onClick={() => Showuser(element.id)}>
-                              <td>{element.nom}</td>
-                              <td>{element.prenom}</td>
-                              <td>{element.sexe}</td>
-                              <td>{element.poste}</td>
-                              <td>{element.phone}</td>
-                              <td>{element.Groupeuser}</td>
-                            </tr>
-                          </>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+                  
+                </thead>
+                <tbody>
+                  {users
+                    .slice(pagesVisited, pagesVisited + usersPerPage)
+                    .map((user) => {
+                      return (
+                        <>
+                          <tr onClick={() => Showuser(user.id)}>
+                            <td>{user.nom}</td>
+                            <td>{user.prenom}</td>
+                            <td>{user.sexe}</td>
+                            <td>{user.poste}</td>
+                            <td>{user.phone}</td>
+                            <td>{user.Groupeuser}</td>
+                          </tr>
+                        </>
+                      );
+                    })}
+                </tbody>
+              </table>
+            </div>
+            <ReactPaginate
+              previousLabel={"Precedent"}
+              nextLabel={"Suivant"}
+              pageCount={pageCount}
+              onPageChange={changePage}
+              containerClassName={"pagination"}
+              previousLinkClassName={"previousBttn"}
+              nextLinkClassName={"nextBttn"}
+              disabledClassName={"paginationDisabled"}
+              activeClassName={"active"}
+              subContainerClassName={"pages pagination"}
+            />
+          </div>
+        </div>
 
               <div className="col-sm-3 form-user">
                 <div className="form-title">
