@@ -16,6 +16,7 @@ import KeshoParents from "./pages/KeshoParents";
 import KeshoChart from "./pages/KeshoChart";
 import ReactStep from "./pages/ReactStep";
 import KeshoChildFollow from "./pages/KeshoChildFollow";
+import KeshoChildDetail from "./pages/KeshoChildDetail";
 
 
 
@@ -29,6 +30,7 @@ const App = ()=>{
 
 
     <Route exact path="/" component={PageConnexion2} /> 
+    <Route exact path="/KeshoChildDetail" component={KeshoChildDetail} /> 
     <Route exact path="/ReactStep" component={ReactStep} /> 
     <Route exact path="/KeshoChildFollow" component={KeshoChildFollow} /> 
     {/* <Route exact path="/ReactStep" component={ReactStep} />  */}

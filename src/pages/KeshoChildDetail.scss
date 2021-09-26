@@ -1,0 +1,99 @@
+.detail-main {
+  height: 100vh;
+  //   background-color: rgb(197, 88, 88);
+}
+
+.detail-profil {
+  height: 100vh;
+  // background-color: rgb(60, 212, 0);
+}
+
+.detail-item {
+  background-color: #fff;
+  // height: 100px;
+ 
+}
+
+.confirm-box{
+    margin: 10px 0px 0px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.detail-item .form-title {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.detail-item .form-title h3 {
+  font-size: 16px;
+  color: white;
+  margin-left: 10px;
+}
+
+.detail-item .form-title i {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.detail-profil {
+  //   background-color: aqua;
+}
+.detail-img {
+  //height: 150px;
+  //background-color: rgb(201, 87, 87);
+  margin-top: 15px;
+  margin-left: 25px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.detail-vaccin{
+    margin-top: 15px;
+    margin-left: 25px;
+    padding: 5px;
+    margin-bottom: 20px;
+   
+}
+
+.detail-vaccin-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+//   background: #eff7f4;
+  color: black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  border-bottom: 4px solid #bed8cf;;
+
+}
+
+.list-group {
+}
+.list-item-detail {
+  float: left;
+//   height: 35px;
+  line-height: 35px;
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-family: "Raleway", sans-serif;
+  transition: background-color 1.5s ease;
+
+  
+  border-bottom: 4px solid #bed8cf;;
+
+  padding-bottom: 5px;
+  margin-left: 5px;
+  
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  list-style: none;
+}

@@ -316,12 +316,33 @@ const KeshoChildren = () => {
                   <li class="list-group-item">Age:{foundUser.nom}</li>
                 </ul>
                 <div className="form-footer-user">
+              
+                <Link className="btn-validate" to="/KeshoChildDetail">
                   <button className="btn signup">Voir plus</button>
+                </Link>
                 </div>
               </div>
             </form>
           </div>
         </div>
+        
+        {/* <div className="form-new-child-button">
+            <div className="row">
+              <div className="d-flex align-items-center">
+                <div className="col-6 footer-form">
+                  <button className="btn">
+                    Back
+                  </button>
+                </div>
+
+                <div className="col-6 footer-form text-right">
+                  <button className="btn">
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div> */}
       </div>
     </>
   );
