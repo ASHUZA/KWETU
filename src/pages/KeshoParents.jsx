@@ -56,29 +56,12 @@ const KeshoParents = () => {
           </div>
         </div>
       </div>
-      
-<Navbar/>
-   
+
+      <Navbar />
+
       <div className="wrapper">
-      
-      <div className="container">
- 
-  <div className="row">
-    
-    
-    <div className="col-12">
-      <FormChild/>
-      
-    </div>
-  </div>
-</div>
-        </div>
-       
-        
-
- 
-
-      
+        <FormChild />
+      </div>
     </>
   );
 };

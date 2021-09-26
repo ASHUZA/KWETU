@@ -1,16 +1,23 @@
 .detail-main {
-  height: 100vh;
-  //   background-color: rgb(197, 88, 88);
+//  height: 100vh;
+   // background-color: rgb(197, 88, 88);
+
 }
 
+.detail-wrappe{
+
+  min-height: 100vh;
+}
 .detail-profil {
   height: 100vh;
   // background-color: rgb(60, 212, 0);
 }
 
 .detail-item {
-  background-color: #fff;
+ // background-color: #fff;
   // height: 100px;
+  margin-bottom: 5px;
+  font-size: 12px;
  
 }
 
@@ -31,7 +38,7 @@
 .detail-item .form-title h3 {
   font-size: 16px;
   color: white;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .detail-item .form-title i {
@@ -46,15 +53,15 @@
 .detail-img {
   //height: 150px;
   //background-color: rgb(201, 87, 87);
-  margin-top: 15px;
-  margin-left: 25px;
+  //margin-top: 15px;
+  // margin-left: 25px;
   padding: 5px;
   margin-bottom: 20px;
 }
 
 .detail-vaccin{
     margin-top: 15px;
-    margin-left: 25px;
+    // margin-left: 25px;
     padding: 5px;
     margin-bottom: 20px;
    
@@ -82,7 +89,7 @@
 //   height: 35px;
   line-height: 35px;
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 12px;
   font-family: "Raleway", sans-serif;
   transition: background-color 1.5s ease;

@@ -32,235 +32,265 @@ export class ConfirmChild extends Component {
 
     return (
       <>
-        <div className="form-new-child">
-          <div className="form-container-confirm">
-            <div className="form-title1">
-              <h3>Cofirmation</h3>
+
+
+        <div className="row">
+          <div className="col-sm-2 detail-profil">
+            <div className="col-sm-12 detail-img">
+              <div className="form-add-child">
+                <div className="child-img">
+                  <img src={img_child} alt="image de l'enfant" />
+                </div>
+              </div>
             </div>
-            <div className="form-group-main">
-              <div class="container">
-                <div class="row form-container">
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Profil enfant</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <div className="form-add-child">
-                          <img src={img_child} alt="image de l'enfant" />
-                        </div>
-                        <li class="list-group-item">Nome: {nom_pere}</li>
-                        <li class="list-group-item">Prenom: {prenom_pere}</li>
-                        <li class="list-group-item">Postnom: {phone_pere}</li>
-                        <li class="list-group-item">Sexe: {sexe_pere}</li>
-                        <li class="list-group-item">
-                          Date de naissance: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Groupe de consulation: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">Adresse: {sexe_pere}</li>
-                        <li class="list-group-item">Provenance: {sexe_pere}</li>
-                        <li class="list-group-item">
-                          Mode d'arrivé: {sexe_pere}
-                        </li>
-                      </ul>
-                    </div>
+            <div className="col-sm-12 detail-vaccin">
+              <div className="detail-item">
+                <div class="confirm-box">
+                  <div className="form-title">
+                    <h3>Vaccination</h3>
+                    <i className="fas fa-ellipsis-h"></i>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Information sanitaire</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
+                  <div className="row">
+                    <div className="col-sm-12">
                       <ul class="list-group">
-                        <li class="list-group-item">
-                          Lieu d'accouchement: {nom_pere}
+                        <li class="detail-vaccin-item">
+                          <p>A la naissance</p>{" "}
+                          <label className="toggle-switch">
+                            <input type="checkbox" />
+                            <span className="switch" />
+                          </label>
                         </li>
-                        <li class="list-group-item">
-                          terme grossesse: {prenom_pere}
+                        <li class="detail-vaccin-item">
+                          <p>6 semaines (1.5 mois)</p>{" "}
+                          <label className="toggle-switch">
+                            <input type="checkbox" />
+                            <span className="switch" />
+                          </label>
                         </li>
-                        <li class="list-group-item">
-                          Sejour en NEONAT: {phone_pere}
+                        <li class="detail-vaccin-item">
+                          <p>10 Semaines (2.5 mois</p>
+                          <label className="toggle-switch">
+                            <input type="checkbox" />
+                            <span className="switch" />
+                          </label>
                         </li>
-                        <li class="list-group-item">
-                          EIG Moyen (Année): {sexe_pere}
+                        <li class="detail-vaccin-item">
+                          <p>14 Semaines (3.5 mois)</p>
+                          <label className="toggle-switch">
+                            <input type="checkbox" />
+                            <span className="switch" />
+                          </label>
                         </li>
-                        <li class="list-group-item">
-                          Asphixie périnnatale: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Poids à la naissance: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Allaitement maternel exclusif: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Constitution alimentaire: {sexe_pere}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Informations vaccinale</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Vaccin 1: {nom_pere}</li>
-                        <li class="list-group-item">Vaccin 2: {prenom_pere}</li>
-                        <li class="list-group-item">Vaccin 3: {phone_pere}</li>
-                        <li class="list-group-item">Vaccin 4: {sexe_pere}</li>
-                        <li class="list-group-item">Vaccin 5: {sexe_pere}</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Informations sur la fratrie</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Tribu: {nom_pere}</li>
-                        <li class="list-group-item">
-                          Niveau socio-eco: {prenom_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Taille du ménage: {phone_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Prossessio télé/radio: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Taille de la fratrie: {prenom_pere}
-                        </li>
-                        <li class="list-group-item">
-                          MAs dans la fratrie: {phone_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Rougeole dans la fratrie: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          ATCD TBC dans la fratrie: {prenom_pere}
-                        </li>
-                        <li class="list-group-item">
-                          TBC parents: {phone_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Consommation poisson: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">Religion: {prenom_pere}</li>
-                        <li class="list-group-item">
-                          Prise récente ATB: {phone_pere}
-                        </li>
-                        <li class="list-group-item">
-                          TBC Declaré guerie: {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Terrain VIH: {prenom_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Hospitalisation récente: {phone_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Durée utilisation coktail(jour): {sexe_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Nombre repas par jour: {prenom_pere}
-                        </li>
-                        <li class="list-group-item">
-                          Usage produit des plantes: {phone_pere}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Accompagnant</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Nom: {nom_tut}</li>
-                        <li class="list-group-item">Prenom: {prenom_tut}</li>
-                        <li class="list-group-item">Telephone: {phone_tut}</li>
-                        <li class="list-group-item">Sexe: {sexe_tut}</li>
-                        <li class="list-group-item">
-                          Taille (cm): {prenom_tut}
-                        </li>
-                        <li class="list-group-item">Poids (Kg): {phone_tut}</li>
-                        <li class="list-group-item">
-                          Tour de taille: {sexe_tut}
-                        </li>
-                        <li class="list-group-item">
-                          Périmetre brachial: {prenom_tut}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Père</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Nom: {nom_pere}</li>
-                        <li class="list-group-item">Prenom: {prenom_pere}</li>
-                        <li class="list-group-item">Telephone: {phone_pere}</li>
-                        <li class="list-group-item">Sexe: {sexe_pere}</li>
-                        <li class="list-group-item">En vie: {phone_pere}</li>
-                        <li class="list-group-item">Scolarité: {sexe_pere}</li>
-                        <li class="list-group-item">
-                          Profession: {phone_pere}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="col-sm confirm-box">
-                      <div className="form-title">
-                        <h3>Mère</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Nom: {nom_mere}</li>
-                        <li class="list-group-item">Prenom: {prenom_mere}</li>
-                        <li class="list-group-item">Telephone: {phone_mere}</li>
-                        <li class="list-group-item">Sexe: {sexe_mere}</li>
-                        <li class="list-group-item">
-                          Etat maternel: {prenom_mere}
-                        </li>
-                        <li class="list-group-item">Scolarité: {phone_mere}</li>
-                        <li class="list-group-item">Profession: {sexe_mere}</li>
-                        <li class="list-group-item">
-                          Statut marital: {prenom_mere}
-                        </li>
-                        <li class="list-group-item">
-                          Si mariées, régime: {phone_mere}
-                        </li>
-                        <li class="list-group-item">
-                          Nombre de femmes: {sexe_mere}
-                        </li>
-                        <li class="list-group-item">
-                          Contraception: {prenom_mere}
+                        <li class="detail-vaccin-item">
+                          <p>9 moiss</p>
+                          <label className="toggle-switch">
+                            <input type="checkbox" />
+                            <span className="switch" />
+                          </label>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="col-sm-10 detail-main d-flex justify-content-between flex-wrap">
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Profil de l'enfant</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Nom: </li>
+                      <li class="list-item-detail">Prenom: </li>
+                      <li class="list-item-detail">Postnom: </li>
+                      <li class="list-item-detail">Sexe:</li>
+                      <li class="list-item-detail">Date de naissance::</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Groupe de consulation: </li>
+                      <li class="list-item-detail">Adresse: </li>
+                      <li class="list-item-detail">Provenance: </li>
+                      <li class="list-item-detail">Mode d'arrivé:</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <br />
-              <br />
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Information sanitaire</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Lieu d'accouchement: </li>
+                      <li class="list-item-detail">terme grossesse: </li>
+                      <li class="list-item-detail">Sejour en NEONAT:: </li>
+                      <li class="list-item-detail">EIG Moyen (Année):</li>
+                      <li class="list-item-detail">Asphixie périnnatale:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Poids à la naissance: </li>
+                      <li class="list-item-detail">
+                        Allaitement maternel exclusif:{" "}
+                      </li>
+                      <li class="list-item-detail">
+                        Constitution alimentaire:{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Accompagnant</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Nom: </li>
+                      <li class="list-item-detail">Prenom: </li>
+                      <li class="list-item-detail">Telephone: </li>
+                      <li class="list-item-detail">Sexe:</li>
+                      <li class="list-item-detail">Taille (cm):</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Poids (Kg): </li>
+                      <li class="list-item-detail">Tour de taille: </li>
+                      <li class="list-item-detail">Périmetre brachial: </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Mère de l'enfant</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Nom: </li>
+                      <li class="list-item-detail">Prenom: </li>
+                      <li class="list-item-detail">Telephone: </li>
+                      <li class="list-item-detail">En vie:</li>
+                      <li class="list-item-detail">Etat maternel:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Scolarité: </li>
+                      <li class="list-item-detail">Profession: </li>
+                      <li class="list-item-detail">Statut marital: </li>
+                      <li class="list-item-detail">Si mariées, régime:</li>
+                      <li class="list-item-detail">Contraception:</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Informations sur la fratrie</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Tribu: </li>
+                      <li class="list-item-detail">Niveau socio-eco: </li>
+                      <li class="list-item-detail">Taille du ménage: </li>
+                      <li class="list-item-detail">Prossessio télé/radio:</li>
+                      <li class="list-item-detail">Taille de la fratrie:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">MAs dans la fratrie: </li>
+                      <li class="list-item-detail">
+                        Rougeole dans la fratrie:{" "}
+                      </li>
+                      <li class="list-item-detail">
+                        ATCD TBC dans la fratrie:{" "}
+                      </li>
+                      <li class="list-item-detail">TBC parents:</li>
+                      <li class="list-item-detail">Consommation poisson:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Religion: </li>
+                      <li class="list-item-detail">Prise récente ATB: </li>
+                      <li class="list-item-detail">TBC Declaré guerie: </li>
+                      <li class="list-item-detail">Terrain VIH:</li>
+                      <li class="list-item-detail">Hospitalisation récente:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">
+                        Durée utilisation coktail(jour):{" "}
+                      </li>
+                      <li class="list-item-detail">Nombre repas par jour: </li>
+                      <li class="list-item-detail">
+                        Usage produit des plantes:{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 detail-item">
+              <div class="col-sm confirm-box">
+                <div className="form-title">
+                  <h3>Père</h3>
+                  <i className="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="row">
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Nom: </li>
+                      <li class="list-item-detail">Prenom: </li>
+                      <li class="list-item-detail">Telephone: </li>
+                      <li class="list-item-detail">Sexe:</li>
+                      <li class="list-item-detail">En vie:</li>
+                    </ul>
+                  </div>
+                  <div className="col-sm-6">
+                    <ul class="list-group">
+                      <li class="list-item-detail">Scolarité: </li>
+                      <li class="list-item-detail">Profession: </li>
+                      <li class="list-item-detail">Nombre de femmes: </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
+          </div>
           <div className="form-new-child-button">
             <div className="row">
               <div className="d-flex align-items-center">
@@ -278,7 +308,7 @@ export class ConfirmChild extends Component {
               </div>
             </div>
           </div>
-        </div>
+  
       </>
     );
   }
