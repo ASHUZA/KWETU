@@ -159,7 +159,7 @@ const KeshoChildren = () => {
   const [users, setUsers] = useState(Utilisateurs.slice(0, 100));
   const [pageNumber, setPageNumber] = useState(0);
 
-  const usersPerPage = 15;
+  const usersPerPage = 5;
   const pagesVisited = pageNumber * usersPerPage;
 
   const pageCount = Math.ceil(users.length / usersPerPage);

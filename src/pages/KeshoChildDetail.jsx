@@ -318,11 +318,11 @@ const KeshoChildDetail = () => {
             <div className="row">
               <div className="d-flex align-items-center">
                 <div className="col-6 footer-form">
-                  <button className="btn">Back</button>
+                  <button className="btn">Visites</button>
                 </div>
 
                 <div className="col-6 footer-form text-right">
-                  <button className="btn">Enregistrer</button>
+                  <button className="btn">Imprimer</button>
                 </div>
               </div>
             </div>

@@ -10,8 +10,14 @@ import SectionStep from "./SectionStep";
 import PageSearch2 from "./PageSearch2";
 import Navbar from "../components/Navbar";
 import "./UserManagement.scss";
+import Modal from "../components/modal1";
+
 
 const UserManagement = () => {
+
+  
+ const [modalOpen, setModalOpen] = useState(false);
+
   const Utilisateurs = [
     {
       id: 1,
@@ -296,13 +302,15 @@ const UserManagement = () => {
             />
           </div>
         </div>
-
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+             
               <div className="col-sm-3 form-user">
                 <div className="form-title">
                   <h3>Compte utilisateur</h3>
-                  <i className="fas fa-ellipsis-h"></i>
+                  <i className="fas fa-ellipsis-h"  onClick={() => {
+          setModalOpen(true);
+        }}></i>
                 </div>
-
                 <form className="form-horizontal user-form">
                   {/* <h3 className="title">Basic information</h3> */}
 

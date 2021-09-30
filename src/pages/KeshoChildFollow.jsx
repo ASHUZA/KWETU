@@ -432,15 +432,24 @@ const KeshoChildFollow = () => {
                     </div>
                   </div>
 
-                  <div className="col-sm-3">
+                  <div className="col-sm-4">
                     <div className="visit-img-box">
-                      <div className="childs-img">
+                      {/* <div className="childs-img">
                         <img
                           src={foundUser.image ? foundUser.image : child1_img}
                           alt="User image"
                           data-toggle="user-menu"
                         />
-                      </div>
+                      </div> */}
+                      <div className="childs-img">
+                <div className="child-img">
+                <img
+                          src={foundUser.image ? foundUser.image : child1_img}
+                          alt="User image"
+                          data-toggle="user-menu"
+                        />
+                </div>
+              </div>
 
                       <div className="childs-img">
                         <img
