@@ -1,34 +1,43 @@
 .modalBackground {
    // width: 100vw;
   //  height: 100vh;
-    background-color: rgba(200, 200, 200);
-    position: fixed;
+   // background-color: rgba(200, 200, 200);
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    position: absolute;
+    margin-top: 50px;
+margin-left: 20px;
   }
 
   .modal-box{
-      background-color: rgb(175, 15, 15);
+    // background-color: rgb(175, 15, 15);
  //    height: 50px;
  width: 200px;
+ padding: 5px;
   }
   .modal-box .modal-item{
-    background-color: rgb(245, 167, 167);
+   // background-color: rgb(245, 167, 167);
     margin: 2px;
  height: 35px;
  display: flex;
  flex-direction: row;
  justify-content: start;
  align-items: center;
- padding-left: 20px ;
+ padding-left: 10px ;
  padding-right: 10px;
+ cursor: pointer;
+
 }
 
 .modal-item h4{
     font-size: 14px;
     font-family: Roboto;
     font-weight: 700PX  ;
+    padding-top: 10px;
 }
 .modal-item i{
     margin-right: 20px;
@@ -36,14 +45,14 @@
 
   
   .modalContainer {
-    width: 500px;
+   // width: 500px;
     // height: 500px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+  //  padding: 25px;
   }
   
   .modalContainer .title {

@@ -12,11 +12,8 @@ import Navbar from "../components/Navbar";
 import "./UserManagement.scss";
 import Modal from "../components/modal1";
 
-
 const UserManagement = () => {
-
-  
- const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const Utilisateurs = [
     {
@@ -164,9 +161,6 @@ const UserManagement = () => {
     },
   ];
 
-
-
-  
   const [users, setUsers] = useState(Utilisateurs.slice(0, 100));
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -178,10 +172,6 @@ const UserManagement = () => {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-
-
-
-
 
   let defaultImage = "user_img_default";
   const [foundUser, setFoundUser] = useState({});
@@ -251,65 +241,66 @@ const UserManagement = () => {
         <div className="user_main d-flex justify-content-center">
           <div className="container">
             <div className="row">
-            <div className="col-sm-9">
-          <div className="pagesearch-main">
-            <div className="table-wrapper">
-              <table className="fl-table">
-                <thead>
-                
-             
-                    <tr>
-                        <th>prenom</th>
-                        <th>Nom</th>
-                        <th>Sexe</th>
-                        <th>Poste</th>
-                        <th>Phone</th>
-                        <th>Type compte</th>
-                      </tr>
-                  
-                </thead>
-                <tbody>
-                  {users
-                    .slice(pagesVisited, pagesVisited + usersPerPage)
-                    .map((user) => {
-                      return (
-                        <>
-                          <tr onClick={() => Showuser(user.id)}>
-                            <td>{user.nom}</td>
-                            <td>{user.prenom}</td>
-                            <td>{user.sexe}</td>
-                            <td>{user.poste}</td>
-                            <td>{user.phone}</td>
-                            <td>{user.Groupeuser}</td>
-                          </tr>
-                        </>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-            <ReactPaginate
-              previousLabel={"Precedent"}
-              nextLabel={"Suivant"}
-              pageCount={pageCount}
-              onPageChange={changePage}
-              containerClassName={"pagination"}
-              previousLinkClassName={"previousBttn"}
-              nextLinkClassName={"nextBttn"}
-              disabledClassName={"paginationDisabled"}
-              activeClassName={"active"}
-              subContainerClassName={"pages pagination"}
-            />
-          </div>
-        </div>
-        {modalOpen && <Modal setOpenModal={setModalOpen} />}
-             
+              <div className="col-sm-9">
+                <div className="pagesearch-main">
+                  <div className="table-wrapper">
+                    <table className="fl-table">
+                      <thead>
+                        <tr>
+                          <th>prenom</th>
+                          <th>Nom</th>
+                          <th>Sexe</th>
+                          <th>Poste</th>
+                          <th>Phone</th>
+                          <th>Type compte</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {users
+                          .slice(pagesVisited, pagesVisited + usersPerPage)
+                          .map((user) => {
+                            return (
+                              <>
+                                <tr onClick={() => Showuser(user.id)}>
+                                  <td>{user.nom}</td>
+                                  <td>{user.prenom}</td>
+                                  <td>{user.sexe}</td>
+                                  <td>{user.poste}</td>
+                                  <td>{user.phone}</td>
+                                  <td>{user.Groupeuser}</td>
+                                </tr>
+                              </>
+                            );
+                          })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <ReactPaginate
+                    previousLabel={"Precedent"}
+                    nextLabel={"Suivant"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"pagination"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"active"}
+                    subContainerClassName={"pages pagination"}
+                  />
+                </div>
+              </div>
+
               <div className="col-sm-3 form-user">
+              {modalOpen && <Modal setOpenModal={setModalOpen} />}
+         
                 <div className="form-title">
                   <h3>Compte utilisateur</h3>
-                  <i className="fas fa-ellipsis-h"  onClick={() => {
-          setModalOpen(true);
-        }}></i>
+                  <i
+                    className="fas fa-ellipsis-h"
+                    onClick={() => {
+                      setModalOpen(true);
+                    }}
+                  ></i>
                 </div>
                 <form className="form-horizontal user-form">
                   {/* <h3 className="title">Basic information</h3> */}
