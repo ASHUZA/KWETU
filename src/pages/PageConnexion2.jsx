@@ -3,6 +3,7 @@ import icon_user from "./../images/svg/bxs-user.svg";
 import icon_lock from "./../images/svg/bxs-lock-alt.svg";
 import img_connection from "./../images/svg/connexion.svg";
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PageHome from "./../pages/PageHome.jsx";
 import SideBar from "../components/SideBar";
@@ -11,11 +12,14 @@ import axios from "axios";
 
 const PageConnexion2 = () => {
 
+  const [darkMode, setDarkMode]= useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
- const submit =(data)=>{
+ const submit =async (data)=>{
    try {
-     const rsponse = axios.get("http://localhost:3001/utilisateur")
+     const response = await axios.post("http://localhost:3001/utilisateur/login",data);
+
+     console.log("ressss ",response)
    } catch (error) {
      
    }
@@ -42,15 +46,17 @@ const PageConnexion2 = () => {
                 <div className="input-group">
                  
                   <box-icon name="user" type="solid"></box-icon>
-                  {/* <img src={icon_user} alt="user icon" /> */}
+                  <img src={icon_user} alt="user icon" />
                   <input type="text" {...register("name")} placeholder="username" />
                 </div>
                 <div className="input-group">
-                  {/* <img src={icon_lock} alt="user icon" /> */}
+                  <img src={icon_lock} alt="user icon" />
 
                   <input type="password"  {...register("password")} placeholder="Password" />
                 </div>
-                <input type='submit' className="btn-sign" value="sign in"/>
+                <div className="password-invalid" style={{display: darkMode ? "block" : "none"}}><p>Mot de passe incorrect</p></div>
+                <input type='submit' className="btn-sign" value="sign in" onClick={()=> setDarkMode(!darkMode)} />
+
              
               </form>
             </div>
