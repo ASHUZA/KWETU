@@ -3,7 +3,9 @@ import icon_user from "./../images/svg/bxs-user.svg";
 import icon_lock from "./../images/svg/bxs-lock-alt.svg";
 import img_connection from "./../images/svg/connexion.svg";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
+
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PageHome from "./../pages/PageHome.jsx";
 import SideBar from "../components/SideBar";
@@ -14,12 +16,19 @@ const PageConnexion2 = () => {
 
   const [darkMode, setDarkMode]= useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
+  const history = useHistory();
  const submit =async (data)=>{
+  console.log(data)
    try {
-     const response = await axios.post("http://localhost:3001/utilisateur/login",data);
+     const response = await axios.post("https://kesho-congo-backend.herokuapp.com/utilisateur/login",data);
+
+     if (response) {
+       history.push("/KeshoChart")
+       
+     }
 
      console.log("ressss ",response)
+     console.log(data)
    } catch (error) {
      
    }
@@ -47,15 +56,15 @@ const PageConnexion2 = () => {
                  
                   <box-icon name="user" type="solid"></box-icon>
                   <img src={icon_user} alt="user icon" />
-                  <input type="text" {...register("name")} placeholder="username" />
+                  <input type="text" {...register("user_name_system")} placeholder="username" />
                 </div>
                 <div className="input-group">
                   <img src={icon_lock} alt="user icon" />
 
-                  <input type="password"  {...register("password")} placeholder="Password" />
+                  <input type="password"  {...register("user_password")} placeholder="Password" />
                 </div>
                 <div className="password-invalid" style={{display: darkMode ? "block" : "none"}}><p>Mot de passe incorrect</p></div>
-                <input type='submit' className="btn-sign" value="sign in" onClick={()=> setDarkMode(!darkMode)} />
+                <input type='submit' className="btn-sign" value="sign in" onClick={} />
 
              
               </form>
