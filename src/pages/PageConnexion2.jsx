@@ -21,7 +21,7 @@ const PageConnexion2 = () => {
   console.log(data)
    try {
      const response = await axios.post("https://kesho-congo-backend.herokuapp.com/utilisateur/login",data);
-
+     localStorage.setItem("user",response.data.acces_token)
      if (response) {
        history.push("/KeshoChart")
        
@@ -31,6 +31,8 @@ const PageConnexion2 = () => {
      console.log(data)
    } catch (error) {
      
+    {()=> setDarkMode(!darkMode)} 
+
    }
  }
   return (
@@ -64,7 +66,7 @@ const PageConnexion2 = () => {
                   <input type="password"  {...register("user_password")} placeholder="Password" />
                 </div>
                 <div className="password-invalid" style={{display: darkMode ? "block" : "none"}}><p>Mot de passe incorrect</p></div>
-                <input type='submit' className="btn-sign" value="sign in" onClick={} />
+                <input type='submit' className="btn-sign" value="sign in"/>
 
              
               </form>

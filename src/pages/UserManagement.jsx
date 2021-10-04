@@ -1,13 +1,10 @@
 import react from "react";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 import ReactPaginate from "react-paginate";
 import "./../scss/PageHome2.scss";
-import { Link } from "react-router-dom";
 import user_img from "../images/user_img.png";
-import user_img_default from "../images/profil.png";
-import SectionStep from "./SectionStep";
-import PageSearch2 from "./PageSearch2";
 import Navbar from "../components/Navbar";
 import "./UserManagement.scss";
 import Modal from "../components/modal1";
@@ -161,6 +158,28 @@ const UserManagement = () => {
     },
   ];
 
+
+
+
+  // const baseURL = "https://kesho-congo-backend.herokuapp.com/utilisateur/";
+
+  //   const [post, setPost] = useState(null);
+  //   const token = localStorage.getItem("user")
+
+  //   console.log(" token ",token)
+  
+  //   useEffect(() => {
+  //     axios.get(baseURL,{headers: {
+  //       'Authorization':{token}
+  //   },}).then((response) => {
+  //       setPost(response.data);
+  //     });
+  //   }, []);
+
+  
+  //   if (!post) return null;
+
+
   const [users, setUsers] = useState(Utilisateurs.slice(0, 100));
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -188,6 +207,8 @@ const UserManagement = () => {
 
   return (
     <>
+
+   
       <div className="homme_main">
         <div className="nav_item nav_burger">
       

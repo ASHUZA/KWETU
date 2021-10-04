@@ -1,5 +1,7 @@
 import react from "react";
 import { useEffect, useState } from "react";
+
+import ReactPaginate from "react-paginate";
 import "./../scss/PageHome2.scss";
 import { Link } from "react-router-dom";
 import user_img from "../images/user_img.png";
@@ -10,8 +12,18 @@ import user_img_default from "../images/profil.png";
 
 import Navbar from "../components/Navbar";
 import "./KeshoChildFollow.scss";
+import ReactStep from "./ReactStep";
+import ClickEvents from "../sections/ClickEvents";
+
+import Modal from "../components/modal1";
+
+
 
 const KeshoChildFollow = () => {
+  // https://www.youtube.com/watch?v=PWK5IBi4-Es
+
+  
+ const [modalOpen, setModalOpen] = useState(false);
   const Utilisateurs = [
     {
       id: 1,
@@ -37,7 +49,7 @@ const KeshoChildFollow = () => {
       Groupeuser: "utilisateur",
       login: "Rushingwa",
       password: "ChekaNabatoto",
-      image: "",
+      image: child2_img,
     },
     {
       id: 3,
@@ -198,17 +210,31 @@ const KeshoChildFollow = () => {
     },
   ];
 
+
+
+  const [users, setUsers] = useState(Utilisateurs.slice(0, 100));
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 15;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const pageCount = Math.ceil(users.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
   return (
     <>
       <div className="homme_main">
         <div className="nav_item nav_burger">
-          <div className="nav_icon">
+          {/* <div className="nav_icon">
             <li className="nav-item">
               <a className="nav-link">
                 <i className="fas fa-bars" onclick="collapseSidebar()"></i>
               </a>
             </li>
-          </div>
+          </div> */}
         </div>
         <div className="nav_item">
           <form className="navbar-search">
@@ -255,75 +281,157 @@ const KeshoChildFollow = () => {
             <div className="row">
               <div className="col-sm-12">
                 <div className="row">
-                <div className="col-sm-3">
-                    <div className="form-container">
-                      <div className="form-title">
-                        <h3>Profil enfant</h3>
-                        <i className="fas fa-ellipsis-h"></i>
-                      </div>
-                      <div className="form-group-main">
-                        <div className="row form-add-child d-flex flex-wrap">
-                          <div className="accompagnant-form col-sm d-flex flex-wrap justify-content-start">
-                            <div className="form-group">
-                              <label htmlFor="name">Nom</label>
-
-                              <input
-                                type="email"
-                                className="form-control"
-                                name="prenom"
-                                value=""
-                              />
-                            </div>
-                            <div className="form-group">
-                              <label htmlFor="name">Prenom</label>
-
-                              <input
-                                type="email"
-                                className="form-control"
-                                name="prenom"
-                                value=""
-                              />
-                            </div>
-                           
-                            <div className="form-group">
-                              <label htmlFor="name">sexe</label>
-                              <input
-                                type="text"
-                                className="form-control"
-                                name="nom"
-                                value=""
-                              />
-                            </div>
-                            <div className="form-group">
-                              <label htmlFor="email">Age</label>
-                              <input
-                                type="email"
-                                className="form-control"
-                                name="prenom"
-                                value=""
-                              />
-                            </div>
-                            <div className="form-group">
-                              <label htmlFor="phone">Etat de santé</label>
-                              <input
-                                type="tel"
-                                className="form-control"
-                                name="phone"
-                                value=""
-                              />
-                            </div>
+                  <div className="col-sm-7 form-user">
+                    <div className="form-title">
+                      <h3>Profil enfant</h3>
+                
+                        <i className="fas fa-ellipsis-h"  onClick={() => {
+                      setModalOpen(true);
+                    }}></i>
+              
+                    </div>
+                    <form className="form-horizontal-user">
+                      <div className="col-sm-12 d-flex justify-content-center">
+                        <div className="col-sm-3">
+                          <div className="childs-img">
+                            <img
+                              src={
+                                foundUser.image ? foundUser.image : child2_img
+                              }
+                              alt="User image"
+                              data-toggle="user-menu"
+                            />
                           </div>
                         </div>
+                        <div className="col-sm-9 d-flex flex-wrap mt-3 user-count">
+                          <div className="form-group">
+                            <label htmlFor="name">Nom</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="sexe"
+                              value={foundUser.nom}
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="name">prenom</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="sexe"
+                              value={foundUser.prenom}
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="name">postnom</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="sexe"
+                              value={foundUser.postnom}
+                            />
+                          </div>
 
-                        <br />
+                          <div className="form-group">
+                            <label htmlFor="name">Sexe</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="sexe"
+                              value={foundUser.sexe}
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="email">Age</label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              name="prenom"
+                              value=""
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="phone">Etat de santé</label>
+                            <input
+                              type="tel"
+                              className="form-control"
+                              name="phone"
+                              value=""
+                            />
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                     
+                    </form>
                   </div>
-                  <div className="col-sm-5">
+
+                  <div className="col-sm-5 form-user">
+                    <ClickEvents />
+                  </div>
+
+                  <div className="col-sm-7">
+                <div className="pagesearch-main">
+                  <div className="table-wrapper">
+                    <table className="fl-table">
+                      <thead>
+                        <tr>
+                        
+
+                          <th>Date</th>
+                            <th>Nutritioniste</th>
+                            <th>Pois</th>
+                            <th>Taille</th>
+                            <th>Etat de santé</th>
+                            <th>Traitement administré</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {users
+                          .slice(pagesVisited, pagesVisited + usersPerPage)
+                          .map((user) => {
+                            return (
+                              <>
+                                <tr onClick={() => Showuser(user.id)}>
+                                  <td>{user.nom}</td>
+                                  <td>{user.prenom}</td>
+                                  <td>{user.sexe}</td>
+                                  <td>{user.poste}</td>
+                                  <td>{user.phone}</td>
+                                  <td>{user.Groupeuser}</td>
+                                </tr>
+                              </>
+                            );
+                          })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <ReactPaginate
+                    previousLabel={"Precedent"}
+                    nextLabel={"Suivant"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"pagination"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"active"}
+                    subContainerClassName={"pages pagination"}
+                  />
+                </div>
+              </div>
+
+              
+
+                  <div className="col-sm-5 mt-5">
+                    
+              {modalOpen && <Modal setOpenModal={setModalOpen} />}
                     <div className="form-container">
+                      
                       <div className="form-title">
                         <h3>Visiste nutritionnel</h3>
-                        <i className="fas fa-ellipsis-h"></i>
+                        <i className="fas fa-ellipsis-h" onClick={() => {
+                      setModalOpen(true);
+                    }}> </i>
                       </div>
                       <div className="form-group-main">
                         <div className="row form-add-child d-flex flex-wrap">
@@ -335,7 +443,7 @@ const KeshoChildFollow = () => {
                                 type="email"
                                 className="form-control"
                                 name="prenom"
-                                value=""
+                                value={foundUser.nom}
                               />
                             </div>
                             <div className="form-group">
@@ -415,82 +523,33 @@ const KeshoChildFollow = () => {
                                 value=""
                               />
                             </div>
+
                             <div className="form-group">
                               <label htmlFor="phone">Etat de l'enfant</label>
                               <input
                                 type="tel"
                                 className="form-control"
                                 name="phone"
-                                value=""
+                                value={foundUser.phone}
                               />
                             </div>
+                            <div className="childs-img">
+                              <img
+                                src={
+                                  foundUser.image ? foundUser.image : child1_img
+                                }
+                                alt="User image"
+                                data-toggle="user-menu"
+                              />
+                            </div>
+                          </div>
+                          <div className="form-footer-user">
+                            <button className="btnsave">Enregister</button>
                           </div>
                         </div>
 
                         <br />
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <div className="visit-img-box">
-                      {/* <div className="childs-img">
-                        <img
-                          src={foundUser.image ? foundUser.image : child1_img}
-                          alt="User image"
-                          data-toggle="user-menu"
-                        />
-                      </div> */}
-                      <div className="childs-img">
-                <div className="child-img">
-                <img
-                          src={foundUser.image ? foundUser.image : child1_img}
-                          alt="User image"
-                          data-toggle="user-menu"
-                        />
-                </div>
-              </div>
-
-                      <div className="childs-img">
-                        <img
-                          src={foundUser.image ? foundUser.image : child2_img}
-                          alt="User image"
-                          data-toggle="user-menu"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-12 form-user">
-                    <div className="table-wrapper">
-                      <table className="fl-table">
-                        <thead>
-                          <tr>
-                            <th>Date</th>
-                            <th>Nutritioniste</th>
-                            <th>Pois</th>
-                            <th>Taille</th>
-                            <th>Etat de santé</th>
-                            <th>Traitement administré</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {Utilisateurs.map(function (element) {
-                            return (
-                              <>
-                                <tr onClick={() => Showuser(element.id)}>
-                                  <td>{element.nom}</td>
-                                  <td>{element.prenom}</td>
-                                  <td>{element.sexe}</td>
-                                  <td>{element.poste}</td>
-                                  <td>{element.phone}</td>
-                                  <td>{element.Groupeuser}</td>
-                                </tr>
-                              </>
-                            );
-                          })}
-                        </tbody>
-                      </table>
                     </div>
                   </div>
                 </div>

@@ -46,3 +46,20 @@ overflow: hidden;
 }
 
 // .form-add-visit{ background-color: rgb(42, 52, 145);}
+
+.btnsave {cursor: pointer;
+  width: 150px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1rem;
+  outline: none;
+  border-radius: 0.5rem;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+  align-self: center;}

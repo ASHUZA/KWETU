@@ -83,9 +83,9 @@ const ClickEvents = () => {
         getElementsAtEvent={getElementsAtEvent}
       />
       <div className='text-center'>
-        <p>{clickedElement}</p>
+        {/* <p>{clickedElement}</p>
         <p>{clickedDataset}</p>
-        <p>{clickedElements}</p>
+        <p>{clickedElements}</p> */}
       </div>
       </div>
 

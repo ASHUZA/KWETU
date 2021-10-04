@@ -4,6 +4,7 @@ import user_img from "../images/user_img.png";
 import img_child from "./../images/enfant2.jpg";
 import Navbar from "../components/Navbar";
 
+import { Link } from "react-router-dom";
 const KeshoChildDetail = () => {
   return (
     <>
@@ -318,7 +319,11 @@ const KeshoChildDetail = () => {
             <div className="row">
               <div className="d-flex align-items-center">
                 <div className="col-6 footer-form">
+                
+                
+                <Link className="btn-validate" to="/KeshoChildFollow">
                   <button className="btn">Visites</button>
+                  </Link>
                 </div>
 
                 <div className="col-6 footer-form text-right">

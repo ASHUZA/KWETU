@@ -11,13 +11,13 @@ const KeshoChild = () => {
     <>
       <div className="homme_main">
         <div className="nav_item nav_burger">
-          <div className="nav_icon">
+          {/* <div className="nav_icon">
             <li className="nav-item">
               <a className="nav-link">
                 <i className="fas fa-bars" onclick="collapseSidebar()"></i>
               </a>
             </li>
-          </div>
+          </div> */}
         </div>
         <div className="nav_item">
           <form className="navbar-search">

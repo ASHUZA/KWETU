@@ -11,6 +11,7 @@
     position: absolute;
     margin-top: 50px;
 margin-left: 20px;
+z-index: 999;
   }
 
   .modal-box{
@@ -33,11 +34,16 @@ margin-left: 20px;
 
 }
 
+.modal-box .modal-item:hover{
+  color: rgb(57, 223, 57);
+}
+
 .modal-item h4{
-    font-size: 14px;
+    font-size: 16px;
     font-family: Roboto;
-    font-weight: 700PX  ;
+    font-weight: 900PX  ;
     padding-top: 10px;
+
 }
 .modal-item i{
     margin-right: 20px;
